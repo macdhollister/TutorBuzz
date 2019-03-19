@@ -9,6 +9,7 @@ class Navbar extends Component {
               <div className="navbar-brand">
                   <a className="navbar-item" href="/">
                       <p className="is-size-4 navTitle">Tooter</p>
+                      <i class='fas fa-chalkboard-teacher' id="tutorGlyphicon" />
                   </a>
 
                   <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false"
