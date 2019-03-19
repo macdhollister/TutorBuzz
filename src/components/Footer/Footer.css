@@ -1,0 +1,7 @@
+.footerDiv {
+    height: 60px;
+}
+
+.footerText, .footerDiv {
+    color: #fff;
+}
