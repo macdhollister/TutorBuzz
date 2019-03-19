@@ -1,0 +1,13 @@
+.signupForm {
+    width: 65%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#signupTitle {
+    text-align: center;
+}
+
+.radioButtons {
+    margin-bottom: 7px;
+}
