@@ -8,7 +8,7 @@ class Navbar extends Component {
           <nav className="navbar" role="navigation" aria-label="main navigation">
               <div className="navbar-brand">
                   <a className="navbar-item" href="/">
-                      <p className="is-size-4 navTitle">Tooter</p>
+                      <p className="is-size-4 navTitle">TutorBuzz</p>
                       <i class='fas fa-chalkboard-teacher' id="tutorGlyphicon" />
                   </a>
 

@@ -8,7 +8,7 @@ class Footer extends Component {
         <footer>
             <div class="has-text-centered footerDiv">
                 <p>
-                    <strong class="footerText">tooter</strong> © 2019 by <p>Josie Strange, Ana Lee, Mac Hollister, and Jonathan Davis</p>
+                    <strong class="footerText">tooter</strong> © 2019 by <p>Josie Strange, Ana Lee, Mac Hollister, Jonathan Davis, and Garrett Straight</p>
                 </p>
             </div>
         </footer>
