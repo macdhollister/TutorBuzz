@@ -4,8 +4,13 @@
     margin-top: 100px;
 }
 
-#signupTitle {
-    text-align: center;
+#usernameText {
+    margin-top: 8px;
+}
+
+#tutorGlyphicon {
+    font-size: 24px;
+    margin-left: 5px;
 }
 
 .radioButtons {
