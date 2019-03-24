@@ -11,3 +11,11 @@
 .radioButtons {
     margin-bottom: 7px;
 }
+
+#signupTitle {
+    color: #b69432 !important;
+}
+
+#signupSubmit {
+    background-color: #b69432;
+}

@@ -12,13 +12,10 @@ class App extends Component {
     return (
         <Router>
             <div className="App">
-                <body class="Site">
                 <Navbar />
                 <Route exact path="/" component={Homepage} />
                 <Route exact path="/tutorPortal" component={tutorPortal} />
                 <Route exact path="/studentPortal" component={studentPortal} />
-                <Footer />
-                </body>
             </div>
         </Router>
     );

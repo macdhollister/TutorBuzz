@@ -2,13 +2,19 @@
     margin-left: 20px;
     font-weight: 900;
     font-family: 'Libre Franklin', sans-serif;
+    color: #b69432;
 }
 
 .login {
     margin-right: 25px;
 }
 
+#loginButton {
+    background-color: #b69432;
+}
+
 #beeGlyph {
     font-size: 30px;
     margin-left: 7px;
+    color: #b69432;
 }
