@@ -8,11 +8,14 @@
     margin-top: 8px;
 }
 
-#tutorGlyphicon {
-    font-size: 24px;
-    margin-left: 5px;
-}
-
 .radioButtons {
     margin-bottom: 7px;
+}
+
+#signupTitle {
+    color: #b69432 !important;
+}
+
+#signupSubmit {
+    background-color: #b69432;
 }

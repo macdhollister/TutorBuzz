@@ -9,15 +9,15 @@ class Navbar extends Component {
               <div className="navbar-brand">
                   <a className="navbar-item" href="/">
                       <p className="is-size-4 navTitle">TutorBuzz</p>
-                      <i class='fas fa-chalkboard-teacher' id="tutorGlyphicon" />
+                      <i className="fab fa-forumbee" id="beeGlyph" />
                   </a>
 
-                  <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                  <div role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false"
                       data-target="navbarBasicExample">
                       <span aria-hidden="true"></span>
                       <span aria-hidden="true"></span>
                       <span aria-hidden="true"></span>
-                  </a>
+                  </div>
               </div>
 
               <div id="navbarBasicExample" className="navbar-menu">
