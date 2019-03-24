@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import '../App.css';
-// import Background from '../images/honeycomb.png';
+import Footer from '../components/Footer';
 
 class tutorPortal extends Component {
   render() {
     return (
-        <p></p>
+
+      <body class="Site">
+
+      <Footer />
+
+      </body>
+
     );
   }
 }
