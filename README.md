@@ -26,5 +26,6 @@ Stretch Goals:
 
 * **Mac Hollister** - *Developer* - (https://github.com/macdhollister)
 * **Jonathan Davis** - *Developer* - (https://github.com/JonathanDavis22)
+* **Ana Lee** - *Developer* - (http://github.com/anabellee25)
 
 HEY EVERYONE ADD YOUR GITHUBS HERE LOSERS!
