@@ -10,6 +10,6 @@ body, html {
 }
 
 body {
-    background-image: url("../images/honeycomb.png");
+    /* background-image: url("../images/honeycomb.png"); */
     background-size: cover;
 }
