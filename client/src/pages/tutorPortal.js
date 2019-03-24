@@ -4,6 +4,9 @@ import TutorGreeting from '../components/TutorGreeting';
 import Calendar from '../components/Calendar';
 import TutorTodaySess from '../components/TutorTodaySess';
 import TutorSessions from '../components/TutorSessions';
+import TutorTimeCard from '../components/TutorTimeCard';
+import TutorAvailability from '../components/TutorAvailability';
+import TutorRequests from '../components/TutorRequests';
 
 
 class tutorPortal extends Component {
@@ -21,6 +24,9 @@ class tutorPortal extends Component {
           <Calendar />
         </div>
         <div className="column">
+          <TutorTimeCard />
+          <TutorAvailability />
+          <TutorRequests />
         </div>
       </div>
       <Footer />

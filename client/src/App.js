@@ -5,6 +5,7 @@ import Homepage from "./pages/homepage";
 // import Footer from "./components/Footer";
 import tutorPortal from "./pages/tutorPortal.js";
 import studentPortal from "./pages/studentPortal.js";
+import tutorProfile from "./pages/tutorProfile.js";
 import './App.css';
 
 class App extends Component {
@@ -16,6 +17,8 @@ class App extends Component {
           <Route exact path="/" component={Homepage} />
           <Route exact path="/tutorPortal" component={tutorPortal} />
           <Route exact path="/studentPortal" component={studentPortal} />
+          <Route exact path="/tutorProfile" component={tutorProfile} />
+
         </div>
       </Router>
     );
