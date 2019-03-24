@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import './TutorSessions.css';
+import "./TutorTodaySess.css";
 
-class TutorSessions extends Component {
+class TutorTodaySess extends Component {
     render() {
         return (
-            <div className="card UpcomingSess" id="TutorUpcomingSess">
+            <div className="card sessionCard">
             
                 <header className="card-header">
                     <p className="card-header-title">
-                        Upcoming Sessions
+                        Today's Session
                     </p>
                 </header>
 
@@ -19,11 +19,11 @@ class TutorSessions extends Component {
                 </div>
 
                 <footer className="card-footer">
-                    <a href="whatever" className="card-footer-item">Sessions Details —></a>
+                    <a href="whatever" className="card-footer-item">Session Details —></a>
                 </footer>
             </div>
         );
     }
 }
 
-export default TutorSessions;
+export default TutorTodaySess;
