@@ -1,6 +1,6 @@
-# Project 3 — School.me
+# TutorBuzz
 
-A tudors and students client-relationship application.
+A tutors and students client-relationship application.
 
 ## MVP
 
@@ -26,3 +26,5 @@ Stretch Goals:
 
 * **Mac Hollister** - *Developer* - (https://github.com/macdhollister)
 * **Jonathan Davis** - *Developer* - (https://github.com/JonathanDavis22)
+
+HEY EVERYONE ADD YOUR GITHUBS HERE LOSERS!
