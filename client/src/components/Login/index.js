@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import "./Signup.css";
+import "./Login.css";
 
-class Signup extends Component {
+class Login extends Component {
   render() {
     return (
-    <div id="parent" className="signupForm">
-        <div className="box signUp">
+    <div id="parent" className="loginForm">
+        <div className="box login">
 
             <header className="card-header">
-                <h1 className="is-size-4 has-text-weight-bold has-text-info card-header-title" id="signupTitle">Make an Account to Get Started</h1>
+                <h1 className="is-size-4 has-text-weight-bold has-text-info card-header-title" id="loginTitle">Login to Continue</h1>
             </header>
 
-            <form action="/signup" method="POST">
+            <form action="/login" method="POST">
                 <div className="field">
                     <label className="label" id="usernameText">Username</label>
                     <div className="control has-icons-left has-icons-right">
@@ -32,20 +32,9 @@ class Signup extends Component {
                     </div>
                 </div>
 
-                <div className="control radioButtons">
-                    <label className="radio" id="tutorSignup">
-                        <input type="radio" name="answer" />
-                        Tutor
-                    </label>
-                    <label className="radio" id="studentSignup">
-                        <input type="radio" name="answer" />
-                        Student
-                    </label>
-                </div>
-
                 <div className="field is-grouped">
                     <div className="control">
-                        <button className="button is-link" id="signupSubmit" type="submit">Submit</button>
+                        <button className="button is-link" id="loginSubmit" type="submit">Submit</button>
                     </div>
                     <div className="control">
                         <a href="/"><button type="button" className="button is-text cancelButton">Cancel</button></a>
@@ -58,4 +47,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default Login;

@@ -1,4 +1,4 @@
-.signupForm {
+.loginForm {
     width: 65%;
     margin: auto;
     margin-top: 100px;
@@ -8,14 +8,11 @@
     margin-top: 8px;
 }
 
-.radioButtons {
-    margin-bottom: 7px;
-}
 
-#signupTitle {
+#loginTitle {
     color: #b69432 !important;
 }
 
-#signupSubmit {
+#loginSubmit {
     background-color: #b69432;
 }

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Signup from "../components/Signup";
 import Footer from "../components/Footer";
 // import './Homepage.css';
+import Login from "../components/Login";
 
 import background from "../images/background.jpg";
 
-class Homepage extends Component {
+class Loginpage extends Component {
   componentDidMount() {
     document.body.style.backgroundImage = `url("${background}")`
   }
@@ -14,7 +14,7 @@ class Homepage extends Component {
     return (
 
     <div className="Site">
-      <Signup />
+      <Login />
       <Footer />
     </div>
       
@@ -22,4 +22,4 @@ class Homepage extends Component {
   }
 }
 
-export default Homepage;
+export default Loginpage;

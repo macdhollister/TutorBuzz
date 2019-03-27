@@ -9,7 +9,7 @@ class Navbar extends Component {
               <div className="navbar-brand">
                   <a className="navbar-item" href="/">
                       <p className="is-size-4 navTitle">TutorBuzz</p>
-                      <i class="fab fa-forumbee" id="beeGlyph" />
+                      <i className="fab fa-forumbee" id="beeGlyph" />
                   </a>
 
                   <div role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -38,7 +38,7 @@ class Navbar extends Component {
                   <div className="navbar-end login">
                       <div className="navbar-item">
                           <div className="buttons">
-                                  <a className="button is-info" id="loginButton" href="/register">
+                                  <a className="button is-info" id="loginButton" href="/loginpage">
                                       <strong>Tutor and Student Login</strong>
                                   </a>
                           </div>

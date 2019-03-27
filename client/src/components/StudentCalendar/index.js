@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import "./Calendar.css";
+import "./StudentCalendar.css";
 
-class Calendar extends Component {
+class StudentCalendar extends Component {
     render() {
         return (
-            <div className="box" id="tutorCalendar">
+            <div className="box" id="calendarBox">
                 <article className="media">
                     <div className="media-content">
                         <div className="content">
-                        <p className="is-size-2">Tutor's Calendar Goes Here</p>
+                        <p className="is-size-2">Calendar Goes Here</p>
                         </div>
                     </div>
                 </article>
@@ -17,4 +17,4 @@ class Calendar extends Component {
     }
 }
 
-export default Calendar;
+export default StudentCalendar;
