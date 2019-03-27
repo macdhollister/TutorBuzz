@@ -38,7 +38,7 @@ class Navbar extends Component {
                   <div className="navbar-end login">
                       <div className="navbar-item">
                           <div className="buttons">
-                                  <a className="button is-info" id="loginButton" href="/register">
+                                  <a className="button is-info" id="loginButton" href="/loginpage">
                                       <strong>Tutor and Student Login</strong>
                                   </a>
                           </div>
