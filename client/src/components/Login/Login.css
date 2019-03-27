@@ -1,0 +1,18 @@
+.loginForm {
+    width: 65%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#usernameText {
+    margin-top: 8px;
+}
+
+
+#loginTitle {
+    color: #b69432 !important;
+}
+
+#loginSubmit {
+    background-color: #b69432;
+}

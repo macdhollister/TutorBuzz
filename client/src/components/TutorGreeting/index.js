@@ -10,6 +10,10 @@ class TutorGreeting extends Component {
                 Hi Mac the Tutor!
                 </p>
             </div>
+
+            <footer className="card-footer">
+                    <a href="whatever" className="card-footer-item">View Profile</a>
+            </footer>
         </div>
     );
   }
