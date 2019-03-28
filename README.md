@@ -28,5 +28,6 @@ Stretch Goals:
 * **Jonathan Davis** - *Developer* - (https://github.com/JonathanDavis22)
 * **Ana Lee** - *Developer* - (http://github.com/anabellee25)
 * **Josie Strange - *Developer*
+* **Garrett Straight** - *Developer* (https://github.com/GarrettStraight)
 
 HEY EVERYONE ADD YOUR GITHUBS HERE LOSERS!
