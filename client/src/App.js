@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Navbar from './components/Navbar';
-import Homepage from "./pages/Homepage";
+import Navbar from './components/StaticComps/Navbar';
+import Homepage from "./pages/HomeAndLogin/Homepage";
 // import Footer from "./components/Footer";
-import tutorPortal from "./pages/tutorPortal.js";
-import studentPortal from "./pages/studentPortal.js";
-import tutorProfile from "./pages/tutorProfile.js";
+import tutorPortal from "./pages/Tutor/tutorPortal.js";
+import studentPortal from "./pages/Student/studentPortal.js";
+import tutorProfile from "./pages/Tutor/tutorProfile.js";
 import './App.css';
-import Loginpage from './pages/Loginpage';
+import Loginpage from './pages/HomeAndLogin/Loginpage';
 
 class App extends Component {
   render() {

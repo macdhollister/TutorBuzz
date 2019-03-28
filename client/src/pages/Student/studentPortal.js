@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import StudentGreeting from '../components/StudentGreeting';
-import StudTodaySess from '../components/StudTodaySess';
-import StudentUpcoming from '../components/StudentUpcoming';
-import StudentCalendar from '../components/StudentCalendar';
-import StudentTutors from '../components/StudentTutors';
-import StudentProfile from '../components/StudentProfile';
-import Footer from '../components/Footer';
+import StudentGreeting from '../../components/StudentComps/StudentGreeting';
+import StudTodaySess from '../../components/StudentComps/StudTodaySess';
+import StudentUpcoming from '../../components/StudentComps/StudentUpcoming';
+import StudentCalendar from '../../components/StudentComps/StudentCalendar';
+import StudentTutors from '../../components/StudentComps/StudentTutors';
+import StudentProfile from '../../components/StudentComps/StudentProfile';
+import Footer from '../../components/StaticComps/Footer';
 import './studentPortal.css';
 
 class studentPortal extends Component {
