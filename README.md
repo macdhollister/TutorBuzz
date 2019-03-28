@@ -6,7 +6,39 @@ A tutors and students client-relationship application.
 
 Our web app will allow for user profiles, scheduling, and video chat.
 
-##
+## Getting Started
+
+1. Clone the repository
+```
+git clone git@github.com:macdhollister/TutorBuzz.git
+cd tutorbuzz
+```
+
+2. Install dependencies
+```
+cd client
+npm install
+```
+
+```
+cd server
+npm install
+```
+
+3. Inside the root directory, create a .env with your mySQL root password (as follows)
+```
+DB_PASSWORD = my_password
+```
+
+4. Start the server (from the server directory)
+```
+nodemon server.js
+```
+
+5. Start the client (from the client directory)
+```
+npm start
+```
 
 ## Technologies
 
@@ -27,6 +59,5 @@ Stretch Goals:
 * **Mac Hollister** - *Developer* - (https://github.com/macdhollister)
 * **Jonathan Davis** - *Developer* - (https://github.com/JonathanDavis22)
 * **Ana Lee** - *Developer* - (http://github.com/anabellee25)
-* **Josie Strange - *Developer*
-
-HEY EVERYONE ADD YOUR GITHUBS HERE LOSERS!
+* **Josie Strange** - *Developer* - (https://github.com/Jostrange)
+* **Garrett Straight** - *Developer* - (https://github.com/GarrettStraight)
