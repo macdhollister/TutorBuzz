@@ -18,7 +18,7 @@ var tutorSchema = new Schema({
   },
 
   students: {
-    type: [Schema.Types.ObjectId],
+    type: [Schema.T ypes.ObjectId],
     ref: "Students"
 },
 
