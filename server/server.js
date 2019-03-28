@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
-// const session = require("express-session");
+const session = require("express-session");
 const PORT = process.env.PORT || 3001;
 const httpServer = require("http").Server(app);
 
 // Passport config
 const passport = require("passport");
-// require("./config/passport")(passport);
+require("./config/passport")(passport);
 
 // DB Config
 const db = require("./models");
@@ -15,11 +15,11 @@ const db = require("./models");
 app.use(express.urlencoded({ extended: false }));
 
 // Express Sessions
-// app.use(session({
-//     secret: "Tutorbuzz is awesome!",
-//     resave: true,
-//     saveUninitialized: true
-// }));
+app.use(session({
+    secret: "Tutorbuzz is awesome!",
+    resave: true,
+    saveUninitialized: true
+}));
 
 // Passport Middleware
 app.use(passport.initialize());
