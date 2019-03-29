@@ -24,7 +24,7 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   session.associate = function(models) {
-    session.belongsTo(models.tutor, {
+    session.belongsTo(models.Tutor, {
       // foreignKey: "email_id",
       onDelete: "cascade"
     });
