@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var offers = sequelize.define("student", {
+  var student = sequelize.define("student", {
     time: {
       type: DataTypes.INTEGER,
       allowNull: false
