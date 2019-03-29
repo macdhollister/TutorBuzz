@@ -1,24 +1,64 @@
 const router = require("express").Router();
+// Requiring our models
+const router = require("../models");
 
-// const db = require("../models");
+module.exports = function (app) {
 
-// Register a new user
-router.post("/signup", (req, res) => {
-    console.log(req.body);
-    res.json("registered!");
-});
+  // GET route for getting all the fields from student
+  // Renedered data to the homepage.
+  app.get("/", function (req, res) {
+    db.student.findAll({
+      raw: true,
+      include: [{
+        model: db.student,
+        attributes:['id','name']
+      }]
+    }).then(function (user) {
+      res.render("homePage", { data: student });
+    });
+  })
 
-// Login a user
-router.post("/login", (req, res) => {
+  // GET route for getting all the datas from student & tutor
+  // Happens when on personal dashboard.
+  app.get("/homePage", function (req, res) {
+    db.tutor.findAll({
+      raw: true,
+      include: [{
+        model: db.tutor,
+        attributes:['id','name']
+      }]
+    }).then(function (tutor) {
+      res.render("homePage", { data: tutor });
+    });
+  })
 
-});
+  // GET route for getting all the datas from both postItem & user table filtered with category.
+  app.get("/api/homePage/:category", function (req, res) {
+    db.session.findAll({
+      where: {
+        category: req.params.category
+      },
+      raw: true,
+      include: [{
+        model: db.session,
+        attributes:['id','name']
+      }]
+    }).then(function (session) {
+      res.render("homePage", { data: session });
+    });
+  })
 
-// Route for logging out
-router.get("/logout", (req, res) => {
-
-});
-
-module.exports = router;
-
+  // Create user record only if it doesn't exist.
+  app.post("/api/users", function (req, res) {
+    db.user.findOrCreate(
+      {
+      where: req.body,
+      attributes:['id','name']
+    })
+      .then(function (user) {
+        res.json(user);
+      });
+  });
+};
 
 
