@@ -8,7 +8,7 @@ class StudentProfile extends Component {
             <div className="card" id="profileCard">
                 <div className="card-content">
                     <p>
-                    Student Profile Here 
+                    Student Profile:
                     </p>
             </div>
         </div>

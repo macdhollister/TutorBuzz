@@ -26,7 +26,6 @@ class studentPortal extends Component {
         </div>
         <div className="column">
           <StudentProfile />
-          
         </div>
       </div>
 
