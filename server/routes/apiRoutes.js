@@ -1,6 +1,6 @@
 const router = require("express").Router();
 // Requiring our models
-const router = require("../models");
+const db = require("../models");
 
 module.exports = function (app) {
 
@@ -35,9 +35,6 @@ module.exports = function (app) {
   // GET route for getting all the datas from both postItem & user table filtered with category.
   app.get("/api/homePage/:category", function (req, res) {
     db.session.findAll({
-      where: {
-        category: req.params.category
-      },
       raw: true,
       include: [{
         model: db.session,
