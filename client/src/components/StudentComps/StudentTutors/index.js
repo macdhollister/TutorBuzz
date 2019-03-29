@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./StudentTutors.css";
+import fetch from 'node-fetch';
 
 class StudentTutors extends Component {
     render() {
@@ -23,6 +24,12 @@ class StudentTutors extends Component {
                     </tbody>
             </table>
         );
+    }
+    componentDidMount(){
+        fetch("http://localhost:3001/sessions")
+        .then(res => res.text())
+        .then(body => console.log(body))
+        .catch(e => console.log(e));
     }
 }
 

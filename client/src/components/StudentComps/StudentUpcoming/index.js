@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./StudentUpcoming.css";
+import fetch from 'node-fetch';
 
 class StudentUpcoming extends Component {
     render() {

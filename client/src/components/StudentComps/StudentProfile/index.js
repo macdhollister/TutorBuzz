@@ -8,22 +8,22 @@ class StudentProfile extends Component {
             <div className="card" id="profileCard">
                 <div className="card-content">
                     <p>
-                    Student Profile:
+                        Student Profile:
                     </p>
+                </div>
             </div>
-        </div>
         );
     }
-    componentDidMount(){
+    componentDidMount() {
         fetch("http://localhost:3001/profile")
             .then(res => res.text())
             .then(body => console.log(body))
             .catch(e => console.log(e));
 
-      
+
     }
 
-    
+
 };
 
 export default StudentProfile;
