@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Signup from "../components/Signup";
-import Footer from "../components/Footer";
+import Signup from "../../components/SignupAndLogin/Signup";
+import Footer from "../../components/StaticComps/Footer";
 // import './Homepage.css';
 
-import background from "../images/background.jpg";
+import background from "../../images/background.jpg";
 
 class Homepage extends Component {
   componentDidMount() {

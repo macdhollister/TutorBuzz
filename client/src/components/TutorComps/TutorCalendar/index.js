@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import "./Calendar.css";
+import "./TutorCalendar.css";
 
-class Calendar extends Component {
+class TutorCalendar extends Component {
     render() {
         return (
             <div className="box" id="tutorCalendar">
@@ -17,4 +17,4 @@ class Calendar extends Component {
     }
 }
 
-export default Calendar;
+export default TutorCalendar;
