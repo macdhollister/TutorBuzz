@@ -13,9 +13,9 @@ class Login extends Component {
 
             <form action="/login" method="POST">
                 <div className="field">
-                    <label className="label" id="usernameText">Username</label>
+                    <label className="label" id="emailText">Email</label>
                     <div className="control has-icons-left has-icons-right">
-                        <input className="input" name="username" type="text" placeholder="Username" />
+                        <input className="input" name="email" type="text" placeholder="Email" />
                         <span className="icon is-small is-left">
                             <i className="fas fa-user"></i>
                         </span>
