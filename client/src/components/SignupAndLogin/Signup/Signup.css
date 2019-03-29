@@ -1,18 +1,21 @@
-.loginForm {
-    width: 65%;
+.signupForm {
+    width: 55%;
     margin: auto;
     margin-top: 100px;
 }
 
-#usernameText {
+#emailText {
     margin-top: 8px;
 }
 
+.radioButtons {
+    margin-bottom: 7px;
+}
 
-#loginTitle {
+#signupTitle {
     color: #b69432 !important;
 }
 
-#loginSubmit {
+#signupSubmit {
     background-color: #b69432;
 }

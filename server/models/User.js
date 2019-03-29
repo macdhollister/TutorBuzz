@@ -1,19 +1,24 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+module.exports = (sequelize, DataTypes) => {
+    const User = sequelize.define("User", {
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+            validate: {
+                isEmail: true
+            }
+        },
 
-const UserSchema = new Schema({
-    email: {
-        type: String,
-        required: true,
-        unique: true,
-        trim: true
-    },
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
 
-    password: {
-        type: String,
-        required: true
-    }
-});
+        // isStudent field? 
+        // association to Tutor/Student model?
+    }, {
+        freezeTableName: true
+    });
 
-const User = mongoose.model("User", UserSchema);
-module.exports = User;
+    return User;
+}

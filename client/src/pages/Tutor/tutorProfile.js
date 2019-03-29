@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Footer from '../components/Footer';
+import Footer from '../../components/StaticComps/Footer';
 
 class tutorProfile extends Component {
     render () {

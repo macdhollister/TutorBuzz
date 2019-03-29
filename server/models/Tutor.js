@@ -1,35 +1,36 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+module.exports = (sequelize, DataTypes) => {
+    const Tutor = sequelize.define("Tutor", {
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+            validate: {
+                isEmail: true
+            }
+        },
 
-var tutorSchema = new Schema({
-  name: {
-    type: String,
-    required: true
-  },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+          unavailable: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+          students: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+          sessions: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
 
-  email: {
-    type: String,
-    required: true
-  },
+        // isStudent field? 
+        // association to Tutor/Student model?
+    }, {
+        freezeTableName: true
+    });
 
-  unavailable: {
-    type: String,
-    required: true
-  },
-
-  students: {
-    type: [Schema.Types.ObjectId],
-    ref: "Students"
-},
-
-sessions: {
-  type: [Schema.Types.ObjectId],
-  ref: "Session"
+    return Tutor;
 }
-
-}
-});
-
-const Tutor = mongoose.model("Tutor", TutorSchema);
-module.exports = Tutor;
-

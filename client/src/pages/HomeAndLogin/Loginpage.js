@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Footer from "../components/Footer";
+import Footer from "../../components/StaticComps/Footer";
 // import './Homepage.css';
-import Login from "../components/Login";
+import Login from "../../components/SignupAndLogin/Login";
 
-import background from "../images/background.jpg";
+import background from "../../images/background.jpg";
 
 class Loginpage extends Component {
   componentDidMount() {

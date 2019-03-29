@@ -1,11 +1,11 @@
 const router = require("express").Router();
+const mongoose = require("mongoose");
 
-// const db = require("../models");
+const db = require("../models");
 
 // Register a new user
-router.post("/signup", (req, res) => {
-    console.log(req.body);
-    res.json("registered!");
+router.post("/register", (req, res) => {
+
 });
 
 // Login a user
