@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./StudentProfile.css";
+import fetch from 'node-fetch';
 
 class StudentProfile extends Component {
     render() {
@@ -7,12 +8,22 @@ class StudentProfile extends Component {
             <div className="card" id="profileCard">
                 <div className="card-content">
                     <p>
-                    Student Profile Here
+                        Student Profile:
                     </p>
+                </div>
             </div>
-        </div>
         );
     }
-}
+    componentDidMount() {
+        fetch("http://localhost:3001/profile")
+            .then(res => res.text())
+            .then(body => console.log(body))
+            .catch(e => console.log(e));
+
+
+    }
+
+
+};
 
 export default StudentProfile;
