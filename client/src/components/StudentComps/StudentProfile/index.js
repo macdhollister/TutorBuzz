@@ -14,13 +14,7 @@ class StudentProfile extends Component {
         </div>
         );
     }
-}
-                        Student Profile:
-                    </p>
-                </div>
-            </div>
-        );
-    }
+
     componentDidMount() {
 
         fetch("http://localhost:3001/session")
