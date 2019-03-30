@@ -15,7 +15,7 @@ class tutorProfile extends Component {
             
             <body className="Site">
               <div className="columns">
-                <div className="col-md-8">
+                <div className="column">
                   
                   <div className="row">
                     <TutorHeader />
@@ -28,7 +28,7 @@ class tutorProfile extends Component {
 
                 </div>
 
-                <div className="col-md-8">
+                <div className="column">
                   <SessionRqstForm />
                 </div>
 
