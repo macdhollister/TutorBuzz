@@ -8,7 +8,6 @@ module.exports = (sequelize, DataTypes) => {
                 isEmail: true
             }
         },
-
         name: {
             type: DataTypes.STRING,
             allowNull: false
@@ -34,3 +33,5 @@ module.exports = (sequelize, DataTypes) => {
 
     return Tutor;
 }
+
+//association for students and sessions
