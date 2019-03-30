@@ -19,7 +19,7 @@ export function SessionsCalendar() {
   );
 }
 
-class TutorCalendarCont extends Component {
+class TutorCalendar extends Component {
     render() {
         return (
             <div className="box" id="tutorCalendar">
@@ -29,6 +29,8 @@ class TutorCalendarCont extends Component {
                     
                         <SessionsCalendar />
 
+                        <p className="is-size-2">Tutor's Calendar Goes Here</p>
+
                         </div>
                     </div>
                 </article>
@@ -37,4 +39,4 @@ class TutorCalendarCont extends Component {
     }
 }
 
-export default TutorCalendarCont;
+export default TutorCalendar;
