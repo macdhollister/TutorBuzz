@@ -26,7 +26,11 @@ class StudentTutors extends Component {
         );
     }
     componentDidMount(){
+
         fetch("http://localhost:3001/session")
+
+        fetch("http://localhost:3001/sessions")
+
         .then(res => res.text())
         .then(body => console.log(body))
         .catch(e => console.log(e));
