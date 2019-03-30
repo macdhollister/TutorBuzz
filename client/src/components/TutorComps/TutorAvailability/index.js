@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./TutorAvailability.css";
+import fetch from 'node-fetch';
 
 class TutorAvailability extends Component {
     render() {
@@ -23,6 +24,12 @@ class TutorAvailability extends Component {
                 </footer>
             </div>
         );
+    }
+    componentDidMount(){
+        fetch("http://localhost:3001/sessions")
+        .then(res => res.text())
+        .then(body => console.log(body))
+        .catch(e => console.log(e));
     }
 }
 

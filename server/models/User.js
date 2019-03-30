@@ -14,6 +14,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
 
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
+
         // isStudent field? 
         // association to Tutor/Student model?
     }, {

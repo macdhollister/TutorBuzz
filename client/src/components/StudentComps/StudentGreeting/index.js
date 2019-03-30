@@ -13,6 +13,11 @@ class StudentGreeting extends Component {
         </div>
     );
   }
+
+  
+
+
 }
 
 export default StudentGreeting;
+

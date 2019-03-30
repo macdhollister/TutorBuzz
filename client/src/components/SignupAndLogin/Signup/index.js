@@ -23,9 +23,11 @@ class Signup extends Component {
                </div>  */}
 
                 <div className="field">
+
                     <label className="label">Full Name</label>
                     <div className="control has-icons-left has-icons-right">
                         <input className="input" name="FullName" type="text" placeholder="Full Name" />
+
                         <span className="icon is-small is-left">
                             <i className="fas fa-user-check"></i>
                         </span>
