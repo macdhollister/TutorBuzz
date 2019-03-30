@@ -10,7 +10,6 @@ class Signup extends Component {
             <header className="card-header">
                 <h1 className="is-size-4 has-text-weight-bold has-text-info card-header-title" id="signupTitle">Make an Account to Get Started</h1>
             </header>
-
              <form action="/signup" method="POST">
                {/* <div className="field">
                    <label className="label" id="usernameText">Username</label>
@@ -51,7 +50,7 @@ class Signup extends Component {
                         </span>
                     </div>
                 </div>
-
+      
                 <div className="field">
                     <label className="label">Enter Password Again</label>
                     <div className="control has-icons-left has-icons-right">

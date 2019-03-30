@@ -8,6 +8,13 @@ class StudentProfile extends Component {
             <div className="card" id="profileCard">
                 <div className="card-content">
                     <p>
+                    Student Profile Here
+                    </p>
+            </div>
+        </div>
+        );
+    }
+}
                         Student Profile:
                     </p>
                 </div>
