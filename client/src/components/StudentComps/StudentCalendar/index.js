@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./StudentCalendar.css";
 
-class StudentCalendar extends Component {
+class StudentCalendarCont extends Component {
     render() {
         return (
             <div className="box" id="calendarBox">
@@ -17,4 +17,4 @@ class StudentCalendar extends Component {
     }
 }
 
-export default StudentCalendar;
+export default StudentCalendarCont;
