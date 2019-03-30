@@ -17,16 +17,17 @@ class tutorPortal extends Component {
      <div className="columns">
         <div className="column">
           <TutorGreeting />
-          <TutorTodaySess />
+          
           <TutorSessions />
+          <TutorRequests />
         </div>
         <div className="column">
           <TutorCalendar />
         </div>
         <div className="column">
           <TutorTimeCard />
-          <TutorAvailability />
-          <TutorRequests />
+          {/* <TutorAvailability /> */}
+          <TutorTodaySess />
         </div>
       </div>
       <Footer />

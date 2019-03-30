@@ -12,15 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         password: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false
         }
-
-        // isStudent field? 
-        // association to Tutor/Student model?
     }, {
         freezeTableName: true
     });

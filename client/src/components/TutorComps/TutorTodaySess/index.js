@@ -9,7 +9,7 @@ class TutorTodaySess extends Component {
 
                 <header className="card-header">
                     <p className="card-header-title">
-                        Today's Session
+                        Booked Session Times
                     </p>
                 </header>
 
@@ -19,9 +19,9 @@ class TutorTodaySess extends Component {
                     </div>
                 </div>
 
-                <footer className="card-footer">
+                {/* <footer className="card-footer">
                     <a href="whatever" className="card-footer-item">Session Details —></a>
-                </footer>
+                </footer> */}
             </div>
         );
     }

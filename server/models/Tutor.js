@@ -8,25 +8,26 @@ module.exports = (sequelize, DataTypes) => {
                 isEmail: true
             }
         },
+
         name: {
             type: DataTypes.STRING,
             allowNull: false
         },
-          unavailable: {
+        
+        unavailable: {
             type: DataTypes.STRING,
             allowNull: false
         },
-          students: {
+        
+        students: {
             type: DataTypes.STRING,
             allowNull: false
         },
-          sessions: {
+        
+        sessions: {
             type: DataTypes.STRING,
             allowNull: false
         }
-
-        // isStudent field? 
-        // association to Tutor/Student model?
     }, {
         freezeTableName: true
     });
