@@ -6,7 +6,6 @@ class StudentUpcoming extends Component {
     render() {
         return (
             <div className="card UpcomingSess" id="upcomingSess">
-
                 <header className="card-header">
                     <p className="card-header-title">
                         Upcoming Sessions

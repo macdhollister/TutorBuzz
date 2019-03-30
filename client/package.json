@@ -4,8 +4,11 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "prop-types": "^15.7.2",
     "node-fetch": "^2.3.0",
     "react": "^16.8.4",
+    "react-datepicker": "^2.3.0",
+    "react-day-picker": "^7.3.0",
     "react-dom": "^16.8.4",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8"

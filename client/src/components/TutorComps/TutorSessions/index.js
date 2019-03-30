@@ -31,7 +31,6 @@ class TutorSessions extends Component {
         .then(body => console.log(body))
         .catch(e => console.log(e));
     }
-
 }
 
 export default TutorSessions;

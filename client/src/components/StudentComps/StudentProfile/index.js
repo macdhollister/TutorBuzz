@@ -8,12 +8,13 @@ class StudentProfile extends Component {
             <div className="card" id="profileCard">
                 <div className="card-content">
                     <p>
-                        Student Profile:
+                    Student Profile Here
                     </p>
-                </div>
             </div>
+        </div>
         );
     }
+
     componentDidMount() {
 
         fetch("http://localhost:3001/session")
