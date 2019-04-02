@@ -1,8 +1,10 @@
 const bcrypt = require("bcryptjs");
 const db = require("../models");
 
-module.exports = function registerUser(email, password, cb) {
-    db.User.findOne({
+module.exports = function registerUser(name, email, password, isTutor, cb) {
+    const studOrTutor = isTutor ? db.Tutor : db.Student;
+
+    studOrTutor.findOne({
         where: {
             email: email
         }
@@ -12,7 +14,8 @@ module.exports = function registerUser(email, password, cb) {
             return cb("/")
         }
 
-        db.User.create({
+        studOrTutor.create({
+            name: name,
             email: email,
             password: bcrypt.hashSync(password, bcrypt.genSaltSync(10))
         }).then(() => {
