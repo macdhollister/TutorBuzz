@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Footer from '../../components/StaticComps/Footer';
-import background from "../../images/honeycomb2.jpg";
+import background from "../../images/honeycomb.png";
 import TutorHeader from "../../components/TutorProfileComps/TutorHeader"
 import TutorCalendar from "../../components/TutorComps/TutorCalendar";
 import TutorTodaySess from "../../components/TutorComps/TutorTodaySess";
