@@ -3,10 +3,14 @@ const app = express();
 const session = require("express-session");
 const PORT = process.env.PORT || 3001;
 const httpServer = require("http").Server(app);
+const cors = require("cors");
+
+// CORS
+app.use(cors());
 
 // Passport config
 const passport = require("passport");
-require("./config/passport")(passport);
+require("./config/passport");
 
 // DB Config
 const db = require("./models");
@@ -26,11 +30,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
-const authRoutes = require("./routes/authRoutes");
-app.use(authRoutes);
-
-const apiRoutes = require("./routes/apiRoutes");
-app.use(apiRoutes);
+app.use(require("./routes/authRoutes"));
+app.use(require("./routes/apiRoutes"));
 
     // add other routes here
 

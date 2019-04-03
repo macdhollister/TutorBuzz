@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  var session = sequelize.define("session", {
+  var session = sequelize.define("Session", {
     time: {
       type: DataTypes.INTEGER,
       allowNull: false
@@ -24,7 +24,7 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   session.associate = function(models) {
-    session.belongsTo(models.tutor, {
+    session.belongsTo(models.Tutor, {
       // foreignKey: "email_id",
       onDelete: "cascade"
     });

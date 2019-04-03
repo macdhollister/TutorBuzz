@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import "./TutorGreeting.css";
+import fetch from 'node-fetch';
+
 
 class TutorGreeting extends Component {
   render() {
@@ -16,6 +18,14 @@ class TutorGreeting extends Component {
             </footer>
         </div>
     );
+  };
+
+  componentDidMount() {
+    fetch("http://localhost:3001/profile")
+      .then(res => res.text())
+      .then(body => console.log(body))
+      .catch(e => console.log(e));
+
   }
 }
 

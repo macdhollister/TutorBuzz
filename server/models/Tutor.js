@@ -13,24 +13,34 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-          unavailable: {
+        
+        unavailable: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            defaultValue: ""
         },
-          students: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-          sessions: {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
 
-        // isStudent field? 
-        // association to Tutor/Student model?
+        password: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        
+        students: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: ""
+        },
+        
+        sessions: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            defaultValue: ""
+        }
     }, {
         freezeTableName: true
     });
 
     return Tutor;
 }
+
+//association for students and sessions

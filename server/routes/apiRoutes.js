@@ -6,7 +6,6 @@ const router = require("express").Router();
 
 //profile just leave to quotes when we have data from user auth
 router.get("/profile", (req, res) => {
-
     //replace this with the actual data when we have the user auth setup
     res.json({name: "Josie"})
 });
@@ -32,12 +31,7 @@ router.post('/profile', function (req, res) {
   router.post('tutor/:tutorId/sessions/', function (req, res) {
     res.send('POST request')
   })
-
-
  
-
-
-
 
 module.exports = router;
 

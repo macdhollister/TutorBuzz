@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './TutorSessions.css';
+import fetch from 'node-fetch';
 
 class TutorSessions extends Component {
     render() {
         return (
             <div className="card UpcomingSess" id="TutorUpcomingSess">
-            
+
                 <header className="card-header">
                     <p className="card-header-title">
                         Upcoming Sessions
@@ -23,6 +24,12 @@ class TutorSessions extends Component {
                 </footer>
             </div>
         );
+    }
+    componentDidMount(){
+        fetch("http://localhost:3001/sessions")
+        .then(res => res.text())
+        .then(body => console.log(body))
+        .catch(e => console.log(e));
     }
 }
 
