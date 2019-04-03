@@ -33,21 +33,17 @@ export class TutorCalendar extends Component {
       ]
     }
   }
-  
+
   render() {
     return (
       <div className="box" id="tutorCalendar">
-        <article className="media">
-          <div className="media-content">
-            <div className="content">
+        <article className="media" id="calendarContent">
 
             <DayPicker
               initialMonth={new Date()}
               selectedDays={this.state.sessions}
             />
 
-            </div>
-          </div>
         </article>
       </div>
     );
