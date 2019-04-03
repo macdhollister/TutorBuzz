@@ -7,41 +7,40 @@ import TutorTodaySess from "../../components/TutorComps/TutorTodaySess";
 import SessionRqstForm from "../../components/TutorProfileComps/SessionRqstForm";
 
 class tutorProfile extends Component {
-    componentDidMount() {
-        document.body.style.backgroundImage = `url("${background}")`
-      }
-    render () {
-        return (
-            
-            <body className="Site">
-              <div className="columns">
-                <div className="column">
-                  
-                  <div className="row">
-                    <TutorHeader />
-                  </div>                   
-                  
-                  <div className="row">
-                    <TutorCalendar />
-                    <TutorTodaySess />
-                  </div>
+  componentDidMount() {
+    document.body.style.backgroundImage = `url("${background}")`
+  }
+  render() {
+    return (
 
-                </div>
+      <body className="Site">
 
-                <div className="column">
-                  <SessionRqstForm />
-                </div>
+        <div className="columns">
 
+          <div className="column">
 
-                
+            <div className="row">
+              <TutorHeader />
             </div>
 
+            <div className="row">
+              <TutorCalendar />
+              <TutorTodaySess />
+            </div>
 
+          </div>
 
-            <Footer />
-            </body>
-        )
-    }
+          <div className="column">
+            <SessionRqstForm />
+          </div>
+
+        </div>
+
+        <Footer />
+
+      </body>
+    )
+  }
 }
 
 export default tutorProfile;

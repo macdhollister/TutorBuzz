@@ -3,40 +3,55 @@ import "./TutorCalendar.css";
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
-export function SessionsCalendar() {
-  return (
-    <DayPicker
-      initialMonth={new Date(2019, 4)}
-      selectedDays={[
-        new Date(2019, 4, 12),
-        new Date(2019, 4, 2),
+export class TutorCalendar extends Component {
+
+  // fetch('/sessions')
+  //   .then(function(response) {
+  //     // Modify data here
+  // })
+  // .catch(function(error){
+  //   console.log(error);
+  // });
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      sessions: [
         {
-          after: new Date(2019, 4, 20),
-          before: new Date(2019, 4, 25),
+          sessionDate: 'new Date(2019, 2, 12)'
         },
-      ]}
-    />
-  );
-}
-
-class TutorCalendar extends Component {
-    render() {
-        return (
-            <div className="box" id="tutorCalendar">
-                <article className="media">
-                    <div className="media-content">
-                        <div className="content">
-                    
-                        <SessionsCalendar />
-
-                        <p className="is-size-2">Tutor's Calendar Goes Here</p>
-
-                        </div>
-                    </div>
-                </article>
-            </div>
-        );
+        {
+          sessionDate: 'new Date(2019, 2, 6)'
+        },
+        {
+          sessionDate: 'new Date(2019, 2, 18)'
+        },
+        {
+          sessionDate: 'new Date(2019, 2, 27)'
+        }
+      ]
     }
+  }
+  
+  render() {
+    return (
+      <div className="box" id="tutorCalendar">
+        <article className="media">
+          <div className="media-content">
+            <div className="content">
+
+            <DayPicker
+              initialMonth={new Date()}
+              selectedDays={this.state.sessions}
+            />
+
+            </div>
+          </div>
+        </article>
+      </div>
+    );
+  }
 }
 
 export default TutorCalendar;

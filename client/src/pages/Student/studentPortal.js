@@ -12,7 +12,7 @@ class studentPortal extends Component {
   render() {
     return (
 
-    <body class="Site">
+    <div class="Site">
 
       <div className="columns">
         <div className="column">
@@ -29,9 +29,11 @@ class studentPortal extends Component {
         </div>
       </div>
 
+      <div id="footerFixStudent"></div>
+
       <Footer />
 
-    </body>
+    </div>
 
     );
   }
