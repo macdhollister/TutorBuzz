@@ -24,6 +24,11 @@ class StudentUpcoming extends Component {
             </div>
         );
     }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 9fed8e78f051105d8bea4e4f0b6c802bc3ae9d1c
     componentDidMount(){
 
      
