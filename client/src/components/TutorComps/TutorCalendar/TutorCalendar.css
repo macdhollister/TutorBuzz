@@ -2,3 +2,7 @@
     margin: 50px 25px 25px 25px;
     height: 400px;
 }
+
+#calendarContent {
+    justify-content: center;
+}

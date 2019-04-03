@@ -37,17 +37,13 @@ export class StudentCalendar extends Component {
   render() {
     return (
       <div className="box" id="studentCalendar">
-        <article className="media">
-          <div className="media-content">
-            <div className="content">
+        <article className="media" id="calendarSpacing">
 
             <DayPicker
               initialMonth={new Date()}
               selectedDays={this.state.sessions}
             />
 
-            </div>
-          </div>
         </article>
       </div>
     );
