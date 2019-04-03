@@ -7,7 +7,7 @@ import TutorSessions from '../../components/TutorComps/TutorSessions';
 import TutorTimeCard from '../../components/TutorComps/TutorTimeCard';
 import TutorAvailability from '../../components/TutorComps/TutorAvailability';
 import TutorRequests from '../../components/TutorComps/TutorRequests';
-
+import './tutorPortal.css';
 
 class tutorPortal extends Component {
   render() {
@@ -29,6 +29,9 @@ class tutorPortal extends Component {
           <TutorRequests />
         </div>
       </div>
+
+      <div id="footerFixTutor"></div>
+      
       <Footer />
 
       </body>

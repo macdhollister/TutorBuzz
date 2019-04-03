@@ -29,6 +29,8 @@ class studentPortal extends Component {
         </div>
       </div>
 
+      <div id="footerFixStudent"></div>
+
       <Footer />
 
     </div>
