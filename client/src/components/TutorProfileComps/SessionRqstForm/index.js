@@ -14,16 +14,12 @@ class SessionRqstForm extends Component {
       Date: 'Date',
       Time: 'Time'
     };
-
+    };
     handleChange = name => (event) => {
       this.setState({
         [name]: event.target.value
       });
-    };
-
   }
-
-}
 
 render() {
   return (
@@ -202,10 +198,12 @@ render() {
     </div>
   )
 }
+
 handleChange(event){
   this.setState({ hour: event.target.value });
 }
 
+}
 
 
 export default SessionRqstForm;

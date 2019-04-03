@@ -1,21 +1,36 @@
 .signupForm {
-    width: 55%;
+    width: 50%;
     margin: auto;
     margin-top: 100px;
-}
-
-#emailText {
+    opacity: .95;
+ }
+ 
+ #emailText {
     margin-top: 8px;
-}
-
-.radioButtons {
+ }
+ 
+ .radioButtons {
     margin-bottom: 7px;
-}
-
-#signupTitle {
+ }
+ 
+ #signupTitle {
     color: #b69432 !important;
-}
-
-#signupSubmit {
+    border: solid lightgray 1.5px;
+    justify-content: space-around;
+    border-radius: 5px;
+    font-family: ‘Segoe UI’, Tahoma, Geneva, Verdana, sans-serif;
+ 
+ }
+ 
+ #signupSubmit {
     background-color: #b69432;
-}
+ }
+ 
+ .field {
+    margin-top: 20px;
+ }
+ 
+ #radiotitle {
+    margin-right: 10px;
+ 
+ }
