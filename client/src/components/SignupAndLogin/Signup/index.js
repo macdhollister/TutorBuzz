@@ -64,11 +64,11 @@ class Signup extends Component {
 
                 <div className="control radioButtons">
                     <label className="radio" id="tutorSignup">
-                        <input type="radio" name="isTutor" value="true" required />
+                        <input id="radiotitle" type="radio" name="isTutor" value="true" required />
                         Tutor
                     </label>
                     <label className="radio" id="studentSignup">
-                        <input type="radio" name="isTutor" value="false" required />
+                        <input id="radiotitle" type="radio" name="isTutor" value="false" required />
                         Student
                     </label>
                 </div>

@@ -1,17 +1,29 @@
 .loginForm {
-    width: 65%;
+    width: 50%;
     margin: auto;
     margin-top: 100px;
-}
-
-#emailText {
-    margin-top: 8px;
-}
-
-#loginTitle {
+    opacity: .95;
+ }
+ 
+ #loginTitle {
     color: #b69432 !important;
-}
-
-#loginSubmit {
+    border: solid lightgray 1.5px;
+    justify-content: space-around;
+    border-radius: 5px;
+    font-family: ‘Segoe UI’, Tahoma, Geneva, Verdana, sans-serif;
+ }
+ #emailText {
+    margin-top: 8px;
+ }
+ 
+ #loginTitle {
+    color: #b69432 !important;
+ }
+ 
+ #loginSubmit {
     background-color: #b69432;
-}
+ }
+ 
+ .emailfield {
+    margin-top: 20px;
+ }
