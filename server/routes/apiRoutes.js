@@ -1,7 +1,5 @@
 const router = require("express").Router();
 
-
-
 // const db = require("../models");
 
 //profile just leave to quotes when we have data from user auth
