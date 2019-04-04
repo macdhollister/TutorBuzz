@@ -23,9 +23,7 @@ router.post("/signup", (req, res) => {
     if (password !== password2) {
         errors.push({message: "Passwords do not match"});
     }
-
-    console.log(errors);
-
+    
     if (!errors.length) {
         registerUser(name, email, password, isTutor, loc => res.redirect(loc));
     } else {
@@ -33,19 +31,9 @@ router.post("/signup", (req, res) => {
     }
 });
 
-// Log in a user
-// router.post("/login", (req, res, next) => {
-//     console.log(req.body);
-//     passport.authenticate("local", {
-//         successRedirect: "/tutorPortal",
-//         failureRedirect: "/login",
-//     })(req, res, next);
-// });
-
 router.post("/login",
     passport.authenticate("local"),
     (req, res) => {
-        // res.redirect("/tutorportal");
         console.log(req.user);
         if (req.user && req.user.isTutor) {
             res.redirect("/tutorPortal")
