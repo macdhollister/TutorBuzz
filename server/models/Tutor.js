@@ -19,11 +19,6 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             defaultValue: ""
         },
-
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
         
         students: {
             type: DataTypes.STRING,
@@ -39,6 +34,14 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         freezeTableName: true
     });
+
+    Tutor.associate = function(models) {
+        Tutor.hasOne(models.User, {
+            onDelete: "cascade",
+            foreignKey: "tutorId",
+            sourceKey: "id"
+        })
+    }
 
     return Tutor;
 }
