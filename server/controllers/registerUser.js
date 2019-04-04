@@ -12,8 +12,8 @@ module.exports = function registerUser(name, email, password, isTutor, cb) {
     }).then(response => {
         if (response) {
             // user exists
-            // return cb("/")
-            res.json("user already exists");
+            return cb("/")
+            // res.json("user already exists");
         }
 
         const newUser = {
@@ -34,8 +34,8 @@ module.exports = function registerUser(name, email, password, isTutor, cb) {
                 info["studentId"] = newUser.id
             }
 
-            // db.User.create(info).then(() => cb("/login"))
-            db.User.create(info).then(() => console.log("created!"));
+            db.User.create(info).then(() => cb("/login"))
+            // db.User.create(info).then(() => console.log("created!"));
         })
     })
 }
