@@ -3,20 +3,17 @@ const app = express();
 const session = require("express-session");
 const PORT = process.env.PORT || 3001;
 const httpServer = require("http").Server(app);
-const cors = require("cors");
-
-// CORS
-app.use(cors());
 
 // Passport config
 const passport = require("passport");
-require("./config/passport");
+require("./config/passport")(passport);
 
 // DB Config
 const db = require("./models");
 
 // Bodyparsing
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 // Express Sessions
 app.use(session({
@@ -28,6 +25,12 @@ app.use(session({
 // Passport Middleware
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Global Vars
+app.use((req, res, next) => {
+    res.locals.user = req.user;
+    next();
+})
 
 // Routes
 app.use(require("./routes/authRoutes"));
