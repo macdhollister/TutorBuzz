@@ -34,8 +34,26 @@ router.post("/signup", (req, res) => {
 });
 
 // Log in a user
-router.post("/login", (req, res, next) => {
-});
+// router.post("/login", (req, res, next) => {
+//     console.log(req.body);
+//     passport.authenticate("local", {
+//         successRedirect: "/tutorPortal",
+//         failureRedirect: "/login",
+//     })(req, res, next);
+// });
+
+router.post("/login",
+    passport.authenticate("local"),
+    (req, res) => {
+        // res.redirect("/tutorportal");
+        console.log(req.user);
+        if (req.user && req.user.isTutor) {
+            res.redirect("/tutorPortal")
+        } else if (req.user) {
+            res.redirect("/studentPortal")
+        }
+    }
+);
 
 // Log out
 router.get("/logout", (req, res) => {
