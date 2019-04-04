@@ -12,6 +12,11 @@ const registerUser = require("../controllers").registerUser;
 // Sign up a new user
 router.post("/signup", (req, res) => {
     const { name, email, password, password2, isTutor } = req.body;
+<<<<<<< HEAD
+=======
+    // const isTutor = JSON.parse(req.body.isTutor);
+
+>>>>>>> 17bd90b45aafddc60b58a92e66f68f1d283d351c
     const errors = [];
 
     if (!(name && email && password && password2 && isTutor)) {
