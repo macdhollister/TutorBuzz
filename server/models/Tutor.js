@@ -13,12 +13,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        
-        unavailable: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            defaultValue: ""
-        },
     }, {
         freezeTableName: true
     });
