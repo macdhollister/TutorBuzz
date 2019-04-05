@@ -15,8 +15,10 @@ router.get("/selfDataTutor",
         const user = req.user.dataValues;
         if (!user.isTutor) res.redirect("/studentPortal");
 
-        
-        res.json(req.user);
+        db.Tutor.findByPk(user.tutorId).then(tutor => {
+            console.log(tutor.dataValues);
+            res.json(tutor.dataValues);
+        })
     }
 )
 
