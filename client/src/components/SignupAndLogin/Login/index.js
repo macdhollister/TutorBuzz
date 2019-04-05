@@ -20,46 +20,6 @@ class Login extends Component {
     });
   };
 
-  // loginUser = (e) => {
-  //   e.preventDefault();
-  //   const { email, password, isTutor } = this.state;
-
-  //   console.log(email, password, isTutor);
-
-  //   if (email === "" || password === "" || isTutor === "") {
-  //     console.log("fill in all fields");
-  //   } else {
-  //     const params = new URLSearchParams();
-  //     params.append("email", email);
-  //     params.append("password", password);
-  //     params.append("isTutor", isTutor);
-  //     // axios({
-  //     //   method: "post",
-  //     //   url: "/login",
-  //     //   data: params
-  //     // })
-
-
-  //     // axios.post("/login", {
-  //     //   email: email,
-  //     //   password: password,
-  //     //   isTutor: isTutor
-  //     // })
-
-  //     fetch("http://localhost:3001/login", {
-  //       headers: {
-  //         "Accept": 'application/json',
-  //         'Content-Type': 'application/json'
-  //       },
-  //       method: "POST",
-  //       body: {email, password, isTutor}
-  //     })
-  //     .then(response => {
-  //       console.log(response);
-  //     })
-  //   }
-  // }
-
   render() {
     const { email, password, isTutor, loggedIn } = this.state;
     if(!loggedIn) return (
@@ -106,23 +66,15 @@ class Login extends Component {
                     </div>
                 </div>
 
-                <div className="control radioButtons">
-                    <label className="radio" id="tutorSignup">
-                        <input type="radio" name="isTutor" value="true" onChange={this.handleChange("isTutor")} required />
-                        Tutor
-                    </label>
-                    <label className="radio" id="studentSignup">
-                        <input type="radio" name="isTutor" value="false" onChange={this.handleChange("isTutor")} required />
-                        Student
-                    </label>
-                </div>
-
                 <div className="field is-grouped">
                     <div className="control">
                         <button className="button is-link" id="loginSubmit" type="submit">Submit</button>
                     </div>
                     <div className="control">
                         <a href="/"><button type="button" className="button is-text cancelButton">Cancel</button></a>
+                    </div>
+                    <div className="control">
+                        <a href="/signup"><button type="button" className="button is-text cancelButton">Make An Account</button></a>
                     </div>
                 </div>
             </form>
