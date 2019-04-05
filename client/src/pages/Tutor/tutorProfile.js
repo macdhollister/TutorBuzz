@@ -8,10 +8,10 @@ import SessionRqstForm from "../../components/TutorProfileComps/SessionRqstForm"
 
 class tutorProfile extends Component {
   state = {
-    name: "TutorHeader",
-    date: "TutorTodaySess",
-    cal: "TutorCalendar",
-    rqstForm: "SessionRqstForm",
+    name: "",
+    date: "",
+    cal: "",
+    rqstForm: "",
 
   }
 
