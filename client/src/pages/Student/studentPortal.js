@@ -9,14 +9,16 @@ import Footer from '../../components/StaticComps/Footer';
 import Navbar from "../../components/StaticComps/Navbar";
 import './studentPortal.css';
 
+import getTodayDate from '../../utils/getTodayDate.js'
+
 class studentPortal extends Component {
   state = {
     name: "",
     date: "",
     cal: "",
     tutor: "",
-    StudentProfile: ""
-
+    StudentProfile: "",
+    today: getTodayDate()
   }
 
 

@@ -7,6 +7,7 @@ import TutorTodaySess from "../../components/TutorComps/TutorTodaySess";
 import SessionRqstForm from "../../components/TutorProfileComps/SessionRqstForm";
 import Navbar from "../../components/StaticComps/Navbar";
 
+import getTodayDate from '../../utils/getTodayDate.js'
 
 class tutorProfile extends Component {
   state = {
@@ -14,7 +15,7 @@ class tutorProfile extends Component {
     date: "",
     cal: "",
     rqstForm: "",
-
+    today: getTodayDate()
   }
 
   componentDidMount() {

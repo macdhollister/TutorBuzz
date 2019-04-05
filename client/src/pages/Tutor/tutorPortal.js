@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fetch from 'node-fetch';
+import getTodayDate from '../../utils/getTodayDate.js'
 
 import Footer from '../../components/StaticComps/Footer';
 import TutorGreeting from '../../components/TutorComps/TutorGreeting';
@@ -17,7 +18,8 @@ class tutorPortal extends Component {
   state = {
     id: "",
     name: "",
-    email: ""
+    email: "",
+    today: getTodayDate()
   }
 
   componentDidMount() {
