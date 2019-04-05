@@ -1,35 +1,32 @@
-const router = require("express").Router();
+const express = require("express");
+const router = express.Router();
+const passport = require("passport");
+const { isAuthenticated } = require("../config/middleware/isAuthenticated");
 
-// const db = require("../models");
+// Models
+const db = require("../models");
 
-//profile just leave to quotes when we have data from user auth
-router.get("/profile", (req, res) => {
-    //replace this with the actual data when we have the user auth setup
-    res.json({name: "Josie"})
-});
+// Get data for authenticated tutor
+router.get("/selfDataTutor",
+    isAuthenticated,
+    (req, res, next) => {
+        if (!req.user) res.redirect("/login");
 
-//route to track sessions for tutor
-router.get("tutor/:tutorId/session", (req, res) => {
-    //replace this with the actual data when we have the user auth setup
-    res.json({session: ""})
-})
+        const user = req.user.dataValues;
+        if (!user.isTutor) res.redirect("/studentPortal");
 
-//route to track sessions for student
-router.get("student/:studentId/session", (req, res) => {
-    //replace this with the actual data when we have the user auth setup
-    res.json({session: ""})
-})
+        
+        res.json(req.user);
+    }
+)
 
-// POST method route
-router.post('/profile', function (req, res) {
-    res.send('POST request')
-  })
+// Get data for authenticated student
+router.get("/selfDataStudent", 
+    passport.authenticate("local"),
+    (req, res, next) => {
 
-//this is where we will post into the specific components for each of the student/tutor profile page
-  router.post('tutor/:tutorId/sessions/', function (req, res) {
-    res.send('POST request')
-  })
- 
+    }
+)
 
 module.exports = router;
 

@@ -30,9 +30,13 @@ module.exports = function(passport) {
                         const studOrTutor = user.isTutor ? db.Tutor : db.Student;
                         const idField = user.isTutor ? user.tutorId : user.studentId;
 
-                        studOrTutor.findByPk(idField).then(user => {
-                            return done(null, user);
-                        })
+                        // sends the db.User found as req.user
+                        return done(null, user);
+
+
+                        // studOrTutor.findByPk(idField).then(user => {
+                        //     return done(null, user);
+                        // })
                     } else {
                         return done(null, false, {message: "Incorrect Password"});
                     }
@@ -48,7 +52,7 @@ module.exports = function(passport) {
 
     passport.deserializeUser((id, done) => {
         console.log("deserializing user...")
-        db.User.findById(id)
+        db.User.findByPk(id)
             .then(user => {
                 done(null, user);
             })

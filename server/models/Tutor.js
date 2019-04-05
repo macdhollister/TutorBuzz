@@ -19,18 +19,6 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             defaultValue: ""
         },
-        
-        students: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            defaultValue: ""
-        },
-        
-        sessions: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            defaultValue: ""
-        }
     }, {
         freezeTableName: true
     });
