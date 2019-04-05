@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
-const bcrypt = require("bcryptjs");
 
 // Models
 const db = require("../models");
@@ -34,7 +33,6 @@ router.post("/signup", (req, res) => {
 router.post("/login",
     passport.authenticate("local"),
     (req, res) => {
-        console.log(req.user);
         if (req.user && req.user.isTutor) {
             res.redirect("/tutorPortal")
         } else if (req.user) {
