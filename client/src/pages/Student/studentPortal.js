@@ -9,6 +9,12 @@ import Footer from '../../components/StaticComps/Footer';
 import './studentPortal.css';
 
 class studentPortal extends Component {
+  componentDidMount() {
+    fetch("/selfDataStudent")
+    .then(res => res.json())
+    .then(res => console.log(res));
+  }
+
   render() {
     return (
 
