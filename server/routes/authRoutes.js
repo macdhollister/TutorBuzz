@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
-const bcrypt = require("bcryptjs");
 
 // Models
 const db = require("../models");
@@ -23,9 +22,7 @@ router.post("/signup", (req, res) => {
     if (password !== password2) {
         errors.push({message: "Passwords do not match"});
     }
-
-    console.log(errors);
-
+    
     if (!errors.length) {
         registerUser(name, email, password, isTutor, loc => res.redirect(loc));
     } else {
@@ -33,9 +30,16 @@ router.post("/signup", (req, res) => {
     }
 });
 
-// Log in a user
-router.post("/login", (req, res, next) => {
-});
+router.post("/login",
+    passport.authenticate("local"),
+    (req, res) => {
+        if (req.user && req.user.isTutor) {
+            res.redirect("/tutorPortal")
+        } else if (req.user) {
+            res.redirect("/studentPortal")
+        }
+    }
+);
 
 // Log out
 router.get("/logout", (req, res) => {

@@ -11,9 +11,6 @@ class Login extends Component {
       email: "",
       password: "",
       isTutor: "",
-      loggedIn: false,
-      showError: false,
-      showNullError: false
     }
   }
   
@@ -23,49 +20,48 @@ class Login extends Component {
     });
   };
 
-  loginUser = (e) => {
-    e.preventDefault();
-    const { email, password, isTutor } = this.state;
-    if (email === "" || password === "" || isTutor === "") {
-      this.setState({
-        showError: false,
-        showNullError: true,
-        loggedIn: false
-      })
-    } else {
-      const params = new URLSearchParams();
-      params.append("email", email);
-      params.append("password", password);
-      params.append("isTutor", isTutor);
-      // axios
-      axios({
-        method: "post",
-        url: "/login",
-        data: params
-      })
-        .then(response => {
-          console.log(response);
-          localStorage.setItem("JWT", response.data.token);
-          this.setState({
-            loggedIn: true,
-            showError: false,
-            showNullError: false
-          })
-        })
-        .catch(error => {
-          console.error(error.response.data);
-          if (error.response.data === "email not found" || error.response.data === "passwords do not match") {
-            this.setState({
-              showError: true,
-              showNullError: false
-            })
-          }
-        })
-    }
-  }
+  // loginUser = (e) => {
+  //   e.preventDefault();
+  //   const { email, password, isTutor } = this.state;
+
+  //   console.log(email, password, isTutor);
+
+  //   if (email === "" || password === "" || isTutor === "") {
+  //     console.log("fill in all fields");
+  //   } else {
+  //     const params = new URLSearchParams();
+  //     params.append("email", email);
+  //     params.append("password", password);
+  //     params.append("isTutor", isTutor);
+  //     // axios({
+  //     //   method: "post",
+  //     //   url: "/login",
+  //     //   data: params
+  //     // })
+
+
+  //     // axios.post("/login", {
+  //     //   email: email,
+  //     //   password: password,
+  //     //   isTutor: isTutor
+  //     // })
+
+  //     fetch("http://localhost:3001/login", {
+  //       headers: {
+  //         "Accept": 'application/json',
+  //         'Content-Type': 'application/json'
+  //       },
+  //       method: "POST",
+  //       body: {email, password, isTutor}
+  //     })
+  //     .then(response => {
+  //       console.log(response);
+  //     })
+  //   }
+  // }
 
   render() {
-    const { email, password, isTutor, loggedIn, showError, showNullError } = this.state;
+    const { email, password, isTutor, loggedIn } = this.state;
     if(!loggedIn) return (
     <div id="parent" className="loginForm">
         <div className="box login">
@@ -74,7 +70,8 @@ class Login extends Component {
                 <h1 className="is-size-4 has-text-weight-bold has-text-info card-header-title" id="loginTitle">Login to Continue</h1>
             </header>
 
-            <form onSubmit={this.loginUser}>
+            {/* <form onSubmit={this.loginUser}> */}
+            <form action="/login" method="POST">
                 <div className="field">
                     <label className="label" id="emailText">Email</label>
                     <div className="control has-icons-left has-icons-right">

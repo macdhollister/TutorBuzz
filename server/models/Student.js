@@ -13,18 +13,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-      
-        // tutors: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-        //     defaultValue: ""
-        // },
-      
-        // sessions: {
-        //     type: DataTypes.STRING,
-        //     allowNull: false,
-        //     defaultValue: ""
-        // }
     }, {
         freezeTableName: true
     });
