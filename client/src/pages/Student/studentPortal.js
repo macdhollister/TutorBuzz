@@ -6,6 +6,7 @@ import StudentCalendar from '../../components/StudentComps/StudentCalendar';
 import StudentTutors from '../../components/StudentComps/StudentTutors';
 import StudentProfile from '../../components/StudentComps/StudentProfile';
 import Footer from '../../components/StaticComps/Footer';
+import Navbar from "../../components/StaticComps/Navbar";
 import './studentPortal.css';
 
 class studentPortal extends Component {
@@ -39,6 +40,7 @@ class studentPortal extends Component {
     return (
 
       <div class="Site">
+        <Navbar />
         <div className="columns">
           <div className="column">
             <StudentGreeting name={this.state.name} />

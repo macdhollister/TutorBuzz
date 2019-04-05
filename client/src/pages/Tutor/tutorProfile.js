@@ -5,6 +5,8 @@ import TutorHeader from "../../components/TutorProfileComps/TutorHeader"
 import TutorCalendar from "../../components/TutorComps/TutorCalendar";
 import TutorTodaySess from "../../components/TutorComps/TutorTodaySess";
 import SessionRqstForm from "../../components/TutorProfileComps/SessionRqstForm";
+import Navbar from "../../components/StaticComps/Navbar";
+
 
 class tutorProfile extends Component {
   state = {
@@ -32,7 +34,7 @@ class tutorProfile extends Component {
     return (
 
       <body className="Site">
-
+        <Navbar />
         <div className="columns">
 
           <div className="column">
