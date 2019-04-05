@@ -7,8 +7,26 @@ import TutorTodaySess from "../../components/TutorComps/TutorTodaySess";
 import SessionRqstForm from "../../components/TutorProfileComps/SessionRqstForm";
 
 class tutorProfile extends Component {
+  state = {
+    name: "",
+    date: "",
+    cal: "",
+    rqstForm: "",
+
+  }
+
   componentDidMount() {
-    document.body.style.backgroundImage = `url("${background}")`
+    document.body.style.backgroundImage = `url("${background}")`;
+    fetch("/selfDataStudent")
+    .then(res => res.json())
+    .then(res => this.setState({
+      name: res.name,
+      date: res.TutorTodaySess,
+      cal: res.TutorCalendar,
+      rqstForm: res.SessionRqstForm,
+      id: res.id
+    }))
+    
   }
   render() {
     return (
@@ -20,18 +38,18 @@ class tutorProfile extends Component {
           <div className="column">
 
             <div className="row">
-              <TutorHeader />
+              <TutorHeader name={this.state.name} />
             </div>
 
             <div className="row">
-              <TutorCalendar />
-              <TutorTodaySess />
+              <TutorCalendar name={this.state.cal} />
+              <TutorTodaySess name={this.state.date} />
             </div>
 
           </div>
 
           <div className="column">
-            <SessionRqstForm />
+            <SessionRqstForm name={this.state.rqstForm}/>
           </div>
 
         </div>

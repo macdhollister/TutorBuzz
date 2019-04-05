@@ -24,9 +24,18 @@ router.get("/selfDataTutor",
 
 // Get data for authenticated student
 router.get("/selfDataStudent", 
-    passport.authenticate("local"),
+    isAuthenticated,
     (req, res, next) => {
+        console.log(req);
+        if (!req.user) res.redirect("/login");
 
+        const user = req.user.dataValues;
+        if (user.isTutor) res.redirect("/tutorPortal");
+
+        db.Student.findByPk(user.studentId).then(student => {
+            console.log(student.dataValues);
+            res.json(student.dataValues);
+        })
     }
 )
 
