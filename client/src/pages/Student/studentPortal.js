@@ -10,11 +10,11 @@ import './studentPortal.css';
 
 class studentPortal extends Component {
   state = {
-    name: "studentGreeting",
-    date: "studentTodaySess",
-    cal: "StudentCalendar",
-    tutor: "studentTutor",
-    StudentProfile: "StudentProfile"
+    name: "",
+    date: "",
+    cal: "",
+    tutor: "",
+    StudentProfile: ""
 
   }
 
