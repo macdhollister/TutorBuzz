@@ -6,19 +6,17 @@ class SessionRqstForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Hour: 'Hr',
-      Min: 'Min',
-      Name: 'Name',
-      Email: 'Contactinfo',
-      Location: 'Location',
-      Date: 'Date',
-      Time: 'Time'
+      Name: '',
+      Email: '',
+      Location: '',
+      Date: '',
     };
-    };
-    handleChange = name => (event) => {
-      this.setState({
-        [name]: event.target.value
-      });
+  };
+  
+  handleChange = name => (event) => {
+    this.setState({
+      [name]: event.target.value
+    });
   }
 
 render() {
@@ -44,7 +42,7 @@ render() {
         </div>
 
         <div className="field">
-          <label className="label">Contactinfo(email)</label>
+          <label className="label">Contact info(email)</label>
           <div className="control">
             <input className="input" 
             type="text" 
@@ -71,7 +69,7 @@ render() {
           <label className="label">Date</label>
           <div className="control">
             <input className="input" 
-            type="text" 
+            type="date" 
             placeholder="date"
             name="Date"
             value={this.state.Date}

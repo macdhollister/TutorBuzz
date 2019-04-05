@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fetch from 'node-fetch';
+import getTodayDate from '../../utils/getTodayDate.js'
 
 import Footer from '../../components/StaticComps/Footer';
 import TutorGreeting from '../../components/TutorComps/TutorGreeting';
@@ -9,13 +10,16 @@ import TutorSessions from '../../components/TutorComps/TutorSessions';
 import TutorTimeCard from '../../components/TutorComps/TutorTimeCard';
 import TutorAvailability from '../../components/TutorComps/TutorAvailability';
 import TutorRequests from '../../components/TutorComps/TutorRequests';
+import Navbar from "../../components/StaticComps/Navbar";
+
 import './tutorPortal.css';
 
 class tutorPortal extends Component {
   state = {
     id: "",
     name: "",
-    email: ""
+    email: "",
+    today: getTodayDate()
   }
 
   componentDidMount() {
@@ -31,6 +35,7 @@ class tutorPortal extends Component {
   render() {
     return (
       <body className="Site">
+        <Navbar />
         <div className="columns">
           <div className="column">
             <TutorGreeting name={this.state.name}/>
