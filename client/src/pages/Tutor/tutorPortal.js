@@ -18,11 +18,8 @@ class tutorPortal extends Component {
     .then(res => console.log(res));
   }
 
-
-
   render() {
     return (
-
       <body className="Site">
         <div className="columns">
           <div className="column">
