@@ -12,13 +12,21 @@ import TutorRequests from '../../components/TutorComps/TutorRequests';
 import './tutorPortal.css';
 
 class tutorPortal extends Component {
+  state = {
+    id: "",
+    name: "",
+    email: ""
+  }
+
   componentDidMount() {
     fetch("/selfDataTutor")
     .then(res => res.json())
-    .then(res => console.log(res));
-  }
-
-
+    .then(res => this.setState({
+      id: res.id,
+      name: res.name,
+      email: res.email
+    }));
+  };
 
   render() {
     return (
@@ -26,7 +34,7 @@ class tutorPortal extends Component {
       <body className="Site">
         <div className="columns">
           <div className="column">
-            <TutorGreeting />
+            <TutorGreeting name={this.state.name}/>
             <TutorTodaySess />
             <TutorSessions />
           </div>
