@@ -1,17 +1,16 @@
 module.exports = function (sequelize, DataTypes) {
   var Session = sequelize.define("Session", {
     startTime: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false
     },
     endTime: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false
     },
     day: {
       type: DataTypes.TEXT,
       allowNull: false,
-      len: [1,2]
     },
     location: {
       type: DataTypes.TEXT,

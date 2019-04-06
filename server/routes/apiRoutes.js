@@ -44,18 +44,43 @@ router.get("/selfDataStudent",
 router.get("/tutorData/:tutorId",
     // isAuthenticated,
     (req, res) => {
-        // res.json({
-        //     id: 1,
-        //     name: "mac test",
-        //     email: "blah@blah.com"
-        // })
-
         db.Tutor.findByPk(req.params.tutorId).then(tutor => {
             res.json(tutor.dataValues);
         })
     }
 )
 
+router.get("/tutorData/:tutorId/sessions", 
+    (req, res) => {
+        db.Session.findAll({
+            where: {
+                tutorId: req.params.tutorId
+            }
+        }).then(sessions => {
+            res.json(sessions);
+        })
+    }
+)
+
+router.post("/newSession",
+    (req, res) => {
+        // console.log(req.body);
+        // res.json(req.body);
+
+        const sessData = req.body;
+        const toCreate = {
+            startTime: `${sessData.startHr}:${sessData.startMin} ${sessData.startAmPm}`,
+            endTime: `${sessData.endHr}:${sessData.endMin} ${sessData.endAmPm}`,
+            day: sessData.Date,
+            location: sessData.Location,
+            studentId: parseInt(sessData.studentId),
+            tutorId: parseInt(sessData.tutorId)
+        }
+        console.log(toCreate)
+
+        db.Session.create(toCreate).then(session => res.redirect("/tutorProfile/" + req.body.tutorId));
+    }
+)
 
 router.get("/sessions",
 (req, res) => {
