@@ -2,21 +2,33 @@ import React, { Component } from 'react';
 import "./SessionRqstForm.css";
 
 
+
 class SessionRqstForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
+
+      Hour: 'Hr',
+      Min: 'Min',
+      Name: 'Name',
+      Email: 'Contactinfo',
+      Location: 'Location',
+      Date: 'Date',
+      Time: 'Time',
+      Id: 'Id'
+
       // Name: '',
       // Email: '',
       // id: null,
-      Location: '',
-      Date: '',
-      startHr: '',
-      startMin: '',
-      startAmPm: '',
-      endHr: '',
-      endMin: '',
-      endAmPm: ''
+//       Location: '',
+//       Date: '',
+//       startHr: '',
+//       startMin: '',
+//       startAmPm: '',
+//       endHr: '',
+//       endMin: '',
+//       endAmPm: ''
+
     };
   };
 

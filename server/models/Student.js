@@ -1,4 +1,4 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = function(sequelize, DataTypes) {
     const Student = sequelize.define("Student", {
         email: {
             type: DataTypes.STRING,
@@ -14,22 +14,29 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
     }, {
-        freezeTableName: true
-    });
+            freezeTableName: true
+        });
 
-    Student.associate = function(models) {
+    Student.associate = function (models) {
+        Student.belongsToMany(models.Tutor, {through: 'StudentTutor', as: 'sessions',  foreignKey: 'sessionId'})
+
         Student.hasOne(models.User, {
             onDelete: "cascade",
             foreignKey: "studentId",
             sourceKey: "id"
         })
 
+
+
+
         Student.hasMany(models.Session, {
             onDelete: "cascade",
             foreignKey: "studentId",
             sourceKey: "id"
         })
+
     }
 
-  return Student;
+    return Student;
 }
+
