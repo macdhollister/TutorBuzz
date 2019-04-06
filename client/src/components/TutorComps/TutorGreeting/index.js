@@ -9,13 +9,13 @@ class TutorGreeting extends Component {
         <div className="card" id="tutorGreeting">
             <div className="card-content">
                 <p className="title">
-                {this.props.name}
+                Hi {this.props.name}!
                 </p>
             </div>
 
-            <footer className="card-footer">
+            {/* <footer className="card-footer">
                     <a href="whatever" className="card-footer-item">View Profile</a>
-            </footer>
+            </footer> */}
         </div>
     );
   };

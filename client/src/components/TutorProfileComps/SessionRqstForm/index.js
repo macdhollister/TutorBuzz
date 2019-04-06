@@ -68,12 +68,13 @@ class SessionRqstForm extends Component {
               name="Name"
               value={this.state.Name}
               onChange={this.handleChange("Name")} />
-            </div>
+</div> 
           </div>
 
           <div className="field">
             <label className="label">Contact info(email)</label>
             <div className="control">
+
               <input className="input" 
               type="text" 
               name="Contactinfo"
@@ -85,7 +86,7 @@ class SessionRqstForm extends Component {
 
           <div className="field">
             <label className="label">Location(address)</label>
-            <div className="control">
+            <div className="control dropdowns">
               <input className="input" 
               type="text" 
               name="Location"
@@ -97,7 +98,7 @@ class SessionRqstForm extends Component {
 
           <div className="field">
             <label className="label">Date</label>
-            <div className="control">
+            <div className="control dropdowns">
               <input className="input" 
               type="date" 
               placeholder="date"
@@ -110,7 +111,7 @@ class SessionRqstForm extends Component {
           <label className="label">Time</label>
           <div className="timedropdowns level">
             <div className="field level-left">
-              <div className="control">
+              <div className="control dropdowns">
                 <div className="select">
                   <select>
                     <option>Hr</option>
@@ -131,9 +132,10 @@ class SessionRqstForm extends Component {
               </div>
             </div>
 
+
             <div className="field level-item">
               {/* <label className="label">Time</label> */}
-              <div className="control">
+              <div className="control dropdowns">
                 <div className="select">
                   <select>
                     <option>Min</option>
@@ -146,26 +148,26 @@ class SessionRqstForm extends Component {
               </div>
             </div>
 
+
             <div className="field level-item">
               {/* <label className="label">Time</label> */}
-              <div className="control">
+              <div className="control dropdowns">
                 <div className="select">
                   <select>
                     <option value="AM">AM</option>
                     <option value="PM">PM</option>
-
                   </select>
                 </div>
               </div>
             </div>
 
+
             <div className="level-item">
               to
             </div>
 
-
             <div className="field level-item">
-              <div className="control">
+              <div className="control dropdowns">
                 <div className="select">
                   <select value={this.state.hour} onChange={this.hourChange}>
                     <option>Hr</option>
@@ -188,7 +190,7 @@ class SessionRqstForm extends Component {
 
             <div className="field level-item">
               {/* <label className="label">Time</label> */}
-              <div className="control">
+              <div className="control dropdowns">
                 <div className="select">
                   <select>
                     <option>Min</option>
@@ -215,12 +217,13 @@ class SessionRqstForm extends Component {
           </div>
 
           <div className="field is-grouped">
-            <div className="control">
+            <div className="control dropdowns ">
               <button className="button is-link" id="sessionRqstSubmit" type="submit" onClick={this.request}>Submit </button>
             </div>
             <div className="control">
               <a href="/"><button type="button" className="button is-text cancelButton">Cancel</button></a>
             </div>
+
           </div>
 
           <div className="field">
