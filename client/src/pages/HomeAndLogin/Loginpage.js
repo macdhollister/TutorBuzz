@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Footer from "../../components/StaticComps/Footer";
 // import './Homepage.css';
 import Login from "../../components/SignupAndLogin/Login";
+import Navbar from "../../components/StaticComps/Navbar";
 
 import background from "../../images/background.jpg";
 
@@ -12,12 +13,11 @@ class Loginpage extends Component {
 
   render() {
     return (
-
-    <div className="Site">
-      <Login />
-      <Footer />
-    </div>
-      
+      <div className="Site">
+        <Navbar />
+        <Login />
+        <Footer />
+      </div>
     );
   }
 }

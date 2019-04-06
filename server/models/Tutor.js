@@ -13,12 +13,6 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        
-        unavailable: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            defaultValue: ""
-        },
     }, {
         freezeTableName: true
     });
@@ -27,6 +21,12 @@ module.exports = function(sequelize, DataTypes) {
         Tutor.belongsToMany(models.Tutor, {through: 'StudentTutor', as: 'sessions',  foreignKey: 'sessionId'})
         Tutor.hasOne(models.User, {
             onDelete: "cascade",
+            sourceKey: "id"
+        })
+
+        Tutor.hasMany(models.Session, {
+            onDelete: "cascade",
+            foreignKey: "tutorId",
             sourceKey: "id"
         })
     }

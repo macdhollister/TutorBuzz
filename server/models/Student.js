@@ -27,6 +27,14 @@ module.exports = function(sequelize, DataTypes) {
         })
 
 
+
+
+        Student.hasMany(models.Session, {
+            onDelete: "cascade",
+            foreignKey: "studentId",
+            sourceKey: "id"
+        })
+
     }
 
     return Student;

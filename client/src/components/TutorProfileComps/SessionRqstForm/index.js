@@ -7,6 +7,7 @@ class SessionRqstForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
+
       Hour: 'Hr',
       Min: 'Min',
       Name: 'Name',
@@ -15,12 +16,37 @@ class SessionRqstForm extends Component {
       Date: 'Date',
       Time: 'Time',
       Id: 'Id'
+
+      // Name: '',
+      // Email: '',
+      // id: null,
+//       Location: '',
+//       Date: '',
+//       startHr: '',
+//       startMin: '',
+//       startAmPm: '',
+//       endHr: '',
+//       endMin: '',
+//       endAmPm: ''
+
     };
-    };
-    handleChange = name => (event) => {
+  };
+
+  componentDidUpdate(prevProps) {
+    console.log("form data: ", this.props.data);
+    if (prevProps.data !== this.props.data) {
       this.setState({
-        [name]: event.target.value
-      });
+        Name: this.props.data.studentName,
+        Email: this.props.data.studentEmail,
+        studentId: this.props.data.studentId
+      })
+    }
+  }
+  
+  handleChange = name => (event) => {
+    this.setState({
+      [name]: event.target.value
+    });
   }
 
 render() {
@@ -46,7 +72,7 @@ render() {
         </div>
 
         <div className="field">
-          <label className="label">Contactinfo(email)</label>
+          <label className="label">Contact info(email)</label>
           <div className="control">
             <input className="input" 
             type="text" 
@@ -73,7 +99,7 @@ render() {
           <label className="label">Date</label>
           <div className="control">
             <input className="input" 
-            type="text" 
+            type="date" 
             placeholder="date"
             name="Date"
             value={this.state.Date}
@@ -134,7 +160,8 @@ render() {
           </div>
 
           <div className="level-item">
-            to</div>
+            to
+          </div>
 
 
           <div className="field level-item">
@@ -199,10 +226,6 @@ render() {
       </form>
     </div>
   )
-}
-
-handleChange(event){
-  this.setState({ hour: event.target.value });
 }
 
 }

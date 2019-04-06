@@ -8,12 +8,12 @@ class TutorHeader extends Component {
             <div className="card" id="tutorProfileGreeting">
             <div className="card-content">
               <p className="tutorHeader">
-                Mac Hollister
-                    </p>
+                {this.props.name}
+              </p>
             </div>
 
             <footer className="card-footer tfooter">
-             <a href="whatever" className="card-footer-item">Add Tutor</a>
+              <a href="whatever" className="card-footer-item">Add Tutor</a>
             </footer>  
     
           </div>

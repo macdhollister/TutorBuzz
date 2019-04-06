@@ -1,6 +1,10 @@
 module.exports = function (sequelize, DataTypes) {
   var Session = sequelize.define("Session", {
-    time: {
+    startTime: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    endTime: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
@@ -12,20 +16,13 @@ module.exports = function (sequelize, DataTypes) {
     location: {
       type: DataTypes.TEXT,
       allowNull: false
+    },
+    confirmed: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false
     }
   });
-
-  Session.associate = function(models) {
-    Session.belongsTo(models.Tutor, {
-      foreignKey: "sessionId",
-      onDelete: "cascade"
-    });
-
-    Session.belongsTo(models.Student, {
-      foreignKey: "sessionId",
-      onDelete: "cascade"
-    })
-  };
 
   return Session;
 };
