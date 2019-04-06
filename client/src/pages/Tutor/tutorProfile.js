@@ -11,10 +11,6 @@ import getTodayDate from '../../utils/getTodayDate.js'
 
 class tutorProfile extends Component {
   state = {
-    name: "",
-    date: "",
-    cal: "",
-    rqstForm: "",
     today: getTodayDate()
   }
 
@@ -22,13 +18,16 @@ class tutorProfile extends Component {
     document.body.style.backgroundImage = `url("${background}")`;
     fetch("/selfDataStudent")
     .then(res => res.json())
-    .then(res => this.setState({
-      name: res.name,
-      date: res.TutorTodaySess,
-      cal: res.TutorCalendar,
-      rqstForm: res.SessionRqstForm,
-      id: res.id
-    }))
+    .then(res => {
+      console.log("selfData res: ", res);
+      this.setState({
+        studentEmail: res.email,
+        studentName: res.name,
+        studentId: res.id
+      })
+    })
+
+    // fetch data for tutor
     
   }
   render() {
@@ -45,14 +44,14 @@ class tutorProfile extends Component {
             </div>
 
             <div className="row">
-              <TutorCalendar name={this.state.cal} />
+              <TutorCalendar data={this.state} />
               <TutorTodaySess name={this.state.date} />
             </div>
 
           </div>
 
           <div className="column">
-            <SessionRqstForm name={this.state.rqstForm}/>
+            <SessionRqstForm data={this.state}/>
           </div>
 
         </div>

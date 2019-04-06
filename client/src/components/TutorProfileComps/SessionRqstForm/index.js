@@ -6,12 +6,30 @@ class SessionRqstForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Name: '',
-      Email: '',
+      // Name: '',
+      // Email: '',
+      // id: null,
       Location: '',
       Date: '',
+      startHr: '',
+      startMin: '',
+      startAmPm: '',
+      endHr: '',
+      endMin: '',
+      endAmPm: ''
     };
   };
+
+  componentDidUpdate(prevProps) {
+    console.log("form data: ", this.props.data);
+    if (prevProps.data !== this.props.data) {
+      this.setState({
+        Name: this.props.data.studentName,
+        Email: this.props.data.studentEmail,
+        studentId: this.props.data.studentId
+      })
+    }
+  }
   
   handleChange = name => (event) => {
     this.setState({
@@ -130,7 +148,8 @@ render() {
           </div>
 
           <div className="level-item">
-            to</div>
+            to
+          </div>
 
 
           <div className="field level-item">
@@ -195,10 +214,6 @@ render() {
       </form>
     </div>
   )
-}
-
-handleChange(event){
-  this.setState({ hour: event.target.value });
 }
 
 }
