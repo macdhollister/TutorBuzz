@@ -12,7 +12,7 @@ class SessionRqstForm extends Component {
       Min: 'Min',
       Name: 'Name',
       Email: 'Contactinfo',
-      Location: 'Location',
+      Location: '',
       Date: 'Date',
       Time: 'Time',
       Id: 'Id'
@@ -20,14 +20,14 @@ class SessionRqstForm extends Component {
       // Name: '',
       // Email: '',
       // id: null,
-//       Location: '',
-//       Date: '',
-//       startHr: '',
-//       startMin: '',
-//       startAmPm: '',
-//       endHr: '',
-//       endMin: '',
-//       endAmPm: ''
+      //       Location: '',
+      //       Date: '',
+      //       startHr: '',
+      //       startMin: '',
+      //       startAmPm: '',
+      //       endHr: '',
+      //       endMin: '',
+      //       endAmPm: ''
 
     };
   };
@@ -42,7 +42,7 @@ class SessionRqstForm extends Component {
       })
     }
   }
-  
+
   handleChange = name => (event) => {
     this.setState({
       [name]: event.target.value
@@ -56,55 +56,63 @@ class SessionRqstForm extends Component {
           <h1 className="is-size-4 has-text-weight-bold has-text-info card-header-title" id="requestTitle">Request A Session</h1>
         </header>
 
-        <form method="POST">
+        <form method="POST" action="/newSession">
 
           <div className="field">
             <label className="label">Name</label>
             <div className="control">
-              <input 
-              className="input" 
-              type="text" 
-              placeholder="Name" 
-              name="Name"
-              value={this.state.Name}
-              onChange={this.handleChange("Name")} />
-</div> 
+              <input
+                className="input"
+                type="text"
+                placeholder="Name"
+                name="Name"
+                value={this.state.Name}
+                onChange={this.handleChange("Name")}
+                required="required"
+              />
+            </div>
           </div>
 
           <div className="field">
             <label className="label">Contact info(email)</label>
             <div className="control">
 
-              <input className="input" 
-              type="text" 
-              name="Contactinfo"
-              placeholder="email"
-              value={this.state.Email}
-              onChange={this.handleChange("Email")} />
+              <input className="input"
+                type="text"
+                name="Contactinfo"
+                placeholder="email"
+                value={this.state.Email}
+                onChange={this.handleChange("Email")}
+                required="required"
+              />
             </div>
           </div>
 
           <div className="field">
             <label className="label">Location(address)</label>
             <div className="control dropdowns">
-              <input className="input" 
-              type="text" 
-              name="Location"
-              placeholder="address"
-              value={this.state.Location}
-              onChange={this.handleChange("Location")} />
+              <input className="input"
+                type="text"
+                name="Location"
+                placeholder="address"
+                value={this.state.Location}
+                onChange={this.handleChange("Location")}
+                required="required"
+              />
             </div>
           </div>
 
           <div className="field">
             <label className="label">Date</label>
             <div className="control dropdowns">
-              <input className="input" 
-              type="date" 
-              placeholder="date"
-              name="Date"
-              value={this.state.Date}
-              onChange={this.handleChange("Date")} />
+              <input className="input"
+                type="date"
+                placeholder="date"
+                name="Date"
+                value={this.state.Date}
+                onChange={this.handleChange("Date")} 
+                required="required"
+              />
             </div>
           </div>
 
@@ -113,7 +121,7 @@ class SessionRqstForm extends Component {
             <div className="field level-left">
               <div className="control dropdowns">
                 <div className="select">
-                  <select>
+                  <select name="startHr" required="required">
                     <option>Hr</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -137,7 +145,7 @@ class SessionRqstForm extends Component {
               {/* <label className="label">Time</label> */}
               <div className="control dropdowns">
                 <div className="select">
-                  <select>
+                  <select name="startMin" required="required">
                     <option>Min</option>
                     <option value="00">:00</option>
                     <option value="15">:15</option>
@@ -153,7 +161,7 @@ class SessionRqstForm extends Component {
               {/* <label className="label">Time</label> */}
               <div className="control dropdowns">
                 <div className="select">
-                  <select>
+                  <select name="startAmPm" required="required">
                     <option value="AM">AM</option>
                     <option value="PM">PM</option>
                   </select>
@@ -169,7 +177,7 @@ class SessionRqstForm extends Component {
             <div className="field level-item">
               <div className="control dropdowns">
                 <div className="select">
-                  <select value={this.state.hour} onChange={this.hourChange}>
+                  <select name="endHr" value={this.state.hour} required="required">
                     <option>Hr</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -192,7 +200,7 @@ class SessionRqstForm extends Component {
               {/* <label className="label">Time</label> */}
               <div className="control dropdowns">
                 <div className="select">
-                  <select>
+                  <select name="endMin" required="required">
                     <option>Min</option>
                     <option value="00">:00</option>
                     <option value="15">:15</option>
@@ -207,7 +215,7 @@ class SessionRqstForm extends Component {
               {/* <label className="label">Time</label> */}
               <div className="control">
                 <div className="select">
-                  <select>
+                  <select name="endAmPm" required="required">
                     <option value="AM">AM</option>
                     <option value="PM">PM</option>
                   </select>
@@ -228,7 +236,7 @@ class SessionRqstForm extends Component {
 
           <div className="field">
             <div className="control">
-              <input 
+              <input
                 className="input"
                 type="hidden"
                 name="tutorId"
@@ -239,7 +247,7 @@ class SessionRqstForm extends Component {
 
           <div className="field">
             <div className="control">
-              <input 
+              <input
                 className="input"
                 type="hidden"
                 name="studentId"
