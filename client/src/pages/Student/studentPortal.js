@@ -37,10 +37,7 @@ class studentPortal extends Component {
 
   render() {
     return (
-
-
       <div className="Site">
-=======
       <div class="Site">
         <Navbar />
 
