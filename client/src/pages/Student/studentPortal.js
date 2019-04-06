@@ -65,6 +65,7 @@ class studentPortal extends Component {
         <Footer />
 
       </div>
+      </div>
 
     );
   }

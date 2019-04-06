@@ -38,6 +38,24 @@ router.get("/selfDataStudent",
     }
 )
 
+
+router.get("/sessions",
+(req, res) => {
+    res.json([]);
+}) 
+
+router.get("/session",
+(req, res) => {
+    res.json([]);
+}) 
+
+
+
+
+    
+  
+
+
 module.exports = router;
 
 
