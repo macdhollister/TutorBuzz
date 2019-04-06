@@ -35,8 +35,12 @@ class tutorPortal extends Component {
   render() {
     return (
       <body className="Site">
+
+        <div className="column">
+
         <Navbar />
         <div className="columns">
+
           <div className="column">
             <TutorGreeting name={this.state.name}/>
             <TutorTodaySess />
@@ -55,7 +59,7 @@ class tutorPortal extends Component {
         <div id="footerFixTutor"></div>
 
         <Footer />
-
+      </div>
       </body>
 
     );
