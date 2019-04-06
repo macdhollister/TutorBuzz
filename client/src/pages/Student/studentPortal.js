@@ -18,7 +18,6 @@ class studentPortal extends Component {
 
   }
 
-
   componentDidMount() {
     fetch("/selfDataStudent")
       .then(res => res.json())
@@ -33,12 +32,10 @@ class studentPortal extends Component {
       }));
   }
 
-
-
   render() {
     return (
 
-      <div class="Site">
+      <div className="Site">
         <div className="columns">
           <div className="column">
             <StudentGreeting name={this.state.name} />

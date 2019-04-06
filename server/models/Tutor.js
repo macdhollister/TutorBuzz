@@ -1,4 +1,4 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = function(sequelize, DataTypes) {
     const Tutor = sequelize.define("Tutor", {
         email: {
             type: DataTypes.STRING,
@@ -24,14 +24,18 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     Tutor.associate = function(models) {
+        Tutor.belongsToMany(models.Tutor, {through: 'StudentTutor', as: 'sessions',  foreignKey: 'sessionId'})
         Tutor.hasOne(models.User, {
             onDelete: "cascade",
-            foreignKey: "tutorId",
             sourceKey: "id"
         })
     }
 
     return Tutor;
 }
+
+
+
+
 
 //association for students and sessions

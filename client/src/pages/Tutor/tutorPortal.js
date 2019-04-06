@@ -21,7 +21,7 @@ class tutorPortal extends Component {
   render() {
     return (
       <body className="Site">
-        <div className="columns">
+        <div className="column">
           <div className="column">
             <TutorGreeting />
             <TutorTodaySess />
