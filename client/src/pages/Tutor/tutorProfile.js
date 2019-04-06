@@ -26,7 +26,6 @@ class tutorProfile extends Component {
       fetch("/selfDataStudent")
       .then(res => res.json())
       .then(res => {
-        console.log("selfData res: ", res);
         this.setState({
           studentEmail: res.email,
           studentName: res.name,
@@ -38,11 +37,18 @@ class tutorProfile extends Component {
       fetch("/tutorData/" + this.state.tutorId)
       .then(res => res.json())
       .then(res => {
-        console.log(res);
         this.setState({
           tutorId: res.id,
           tutorName: res.name,
           tutorEmail: res.email
+        })
+      })
+
+      fetch("/tutorData/" + this.state.tutorId + "/sessions")
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          tutorSessions: res
         })
       })
     })
@@ -61,8 +67,8 @@ class tutorProfile extends Component {
             </div>
 
             <div className="row tutorProfileCalendar" >
-              <TutorProfileCalendar data={this.state} />
-              <TutorSessions name={this.state.date} />
+              <TutorProfileCalendar data={this.state.tutorSessions} />
+              <TutorSessions data={this.state.tutorSessions} />
             </div>
 
           </div>
