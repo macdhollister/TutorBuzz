@@ -27,3 +27,21 @@
  .emailfield {
     margin-top: 20px;
  }
+
+ @media only screen and (max-width: 1024px) {
+   .loginForm {
+       width: 80%;
+       margin: auto;
+       margin-top: 300px;
+       opacity: .95;
+    }
+ }
+ 
+ @media only screen and (max-width: 414px) {
+   .loginForm {
+       width: 100%;
+       margin: auto 12px;
+       margin-top: 100px;
+       opacity: .95;
+    }
+ }

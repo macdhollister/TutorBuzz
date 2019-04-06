@@ -34,3 +34,22 @@
     margin-right: 10px;
  
  }
+
+
+ @media only screen and (max-width: 1024px) {
+   .signupForm {
+       width: 80%;
+       margin: auto;
+       margin-top: 100px;
+       opacity: .95;
+    }
+ }
+ 
+ @media only screen and (max-width: 414px) {
+   .signupForm {
+       width: 95%;
+       margin: auto;
+       margin-top: 60px;
+       opacity: .95;
+    }
+ }
