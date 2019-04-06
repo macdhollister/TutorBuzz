@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Footer from "../../components/StaticComps/Footer";
-// import './Homepage.css';
+import './Homepage.css';
 import Login from "../../components/SignupAndLogin/Login";
 import Navbar from "../../components/StaticComps/Navbar";
 

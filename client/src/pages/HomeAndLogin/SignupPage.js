@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Signup from "../../components/SignupAndLogin/Signup";
 import Footer from "../../components/StaticComps/Footer";
 import Navbar from "../../components/StaticComps/Navbar";
-// import './Homepage.css';
+import './Homepage.css';
 
 import background from "../../images/background.jpg";
 
