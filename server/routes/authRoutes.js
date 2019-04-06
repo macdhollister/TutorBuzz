@@ -41,8 +41,17 @@ router.post("/login",
     }
 );
 
+router.get("/checkAuth",
+    (req, res) => {
+        if (req.user) res.json({isLoggedIn: true})
+        else res.json({isLoggedIn: false});
+    }
+)
+
 // Log out
 router.get("/logout", (req, res) => {
+    req.logout();
+    res.redirect("/login");
 });
 
 module.exports = router;

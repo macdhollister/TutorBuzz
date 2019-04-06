@@ -26,7 +26,6 @@ router.get("/selfDataTutor",
 router.get("/selfDataStudent", 
     isAuthenticated,
     (req, res, next) => {
-        console.log(req);
         if (!req.user) res.redirect("/login");
 
         const user = req.user.dataValues;

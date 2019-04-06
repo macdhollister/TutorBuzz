@@ -23,6 +23,12 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "studentId",
             sourceKey: "id"
         })
+
+        Student.hasMany(models.Session, {
+            onDelete: "cascade",
+            foreignKey: "studentId",
+            sourceKey: "id"
+        })
     }
 
   return Student;

@@ -6,7 +6,10 @@ import StudentCalendar from '../../components/StudentComps/StudentCalendar';
 import StudentTutors from '../../components/StudentComps/StudentTutors';
 import StudentProfile from '../../components/StudentComps/StudentProfile';
 import Footer from '../../components/StaticComps/Footer';
+import Navbar from "../../components/StaticComps/Navbar";
 import './studentPortal.css';
+
+import getTodayDate from '../../utils/getTodayDate.js'
 
 class studentPortal extends Component {
   state = {
@@ -14,8 +17,8 @@ class studentPortal extends Component {
     date: "",
     cal: "",
     tutor: "",
-    StudentProfile: ""
-
+    StudentProfile: "",
+    today: getTodayDate()
   }
 
 
@@ -39,6 +42,7 @@ class studentPortal extends Component {
     return (
 
       <div class="Site">
+        <Navbar />
         <div className="columns">
           <div className="column">
             <StudentGreeting name={this.state.name} />
