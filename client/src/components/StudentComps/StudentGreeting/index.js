@@ -7,7 +7,7 @@ class StudentGreeting extends Component {
         <div className="card" id="studentGreeting">
             <div className="card-content">
                 <p className="title" id="greetingText">
-                Hi Student!
+                Hi {this.props.name}!
                 </p>
             </div>
         </div>

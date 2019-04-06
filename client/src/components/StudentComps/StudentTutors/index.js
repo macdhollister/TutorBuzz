@@ -14,21 +14,21 @@ class StudentTutors extends Component {
     }
     render() {
         return (
-            <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" id="tutorTable">
+            <table className="table is-narrow is-hoverable is-fullwidth" id="tutorTable">
                 <thead>
                     <tr>
                         <th>Tutors</th>
-                        <th>Subject</th>
+                        {/* <th>Subject</th> */}
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Mac</td>
-                        <td>being a JERK</td>
+                        <td><a href="tutorProfile/1">Albert Einstein</a></td>
+                        <td>Physics</td>
                     </tr>
                     <tr>
-                        <td>Josie</td>
-                        <td>Friend Abuse</td>
+                        {/* <td>Josie</td>
+                        <td>Friend Abuse</td> */}
                     </tr>
                 </tbody>
             </table>

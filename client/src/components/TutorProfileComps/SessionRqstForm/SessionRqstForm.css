@@ -2,6 +2,24 @@
     width: 90%;
     margin: auto;
     margin-top: 50px;
+    margin-right: 80px;
     background-color: white;
-    padding: 10px;
+    padding: 30px;
+    height: 700px;
+    border-radius: 10px;
+}
+
+.lastAMPM {
+    margin-bottom: 12px;
+    
+}
+
+#requestTitle {
+    color: #b69432 !important;
+    justify-content: space-around;
+    border: lightgray 1px solid;
+}
+
+#sessionRqstSubmit {
+    background-color: #b69432 !important;;
 }

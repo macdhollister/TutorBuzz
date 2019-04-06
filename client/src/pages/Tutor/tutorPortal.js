@@ -7,7 +7,7 @@ import TutorGreeting from '../../components/TutorComps/TutorGreeting';
 import TutorCalendar from '../../components/TutorComps/TutorCalendar';
 import TutorTodaySess from '../../components/TutorComps/TutorTodaySess';
 import TutorSessions from '../../components/TutorComps/TutorSessions';
-import TutorTimeCard from '../../components/TutorComps/TutorTimeCard';
+// import TutorTimeCard from '../../components/TutorComps/TutorTimeCard';
 import TutorAvailability from '../../components/TutorComps/TutorAvailability';
 import TutorRequests from '../../components/TutorComps/TutorRequests';
 import Navbar from "../../components/StaticComps/Navbar";
@@ -35,8 +35,12 @@ class tutorPortal extends Component {
   render() {
     return (
       <body className="Site">
+
+        <div className="column">
+
         <Navbar />
         <div className="columns">
+
           <div className="column">
             <TutorGreeting name={this.state.name}/>
             <TutorTodaySess />
@@ -46,7 +50,7 @@ class tutorPortal extends Component {
             <TutorCalendar />
           </div>
           <div className="column">
-            <TutorTimeCard />
+            {/* <TutorTimeCard /> */}
             <TutorAvailability />
             <TutorRequests />
           </div>
@@ -55,7 +59,7 @@ class tutorPortal extends Component {
         <div id="footerFixTutor"></div>
 
         <Footer />
-
+      </div>
       </body>
 
     );

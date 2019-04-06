@@ -18,9 +18,9 @@ class StudentUpcoming extends Component {
                     </div>
                 </div>
 
-                <footer className="card-footer">
+                {/* <footer className="card-footer">
                     <a href="whatever" className="card-footer-item">Sessions Details —></a>
-                </footer>
+                </footer> */}
             </div>
         );
     }
