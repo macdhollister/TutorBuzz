@@ -16,19 +16,33 @@ class tutorProfile extends Component {
 
   componentDidMount() {
     document.body.style.backgroundImage = `url("${background}")`;
-    fetch("/selfDataStudent")
-    .then(res => res.json())
-    .then(res => {
-      console.log("selfData res: ", res);
-      this.setState({
-        studentEmail: res.email,
-        studentName: res.name,
-        studentId: res.id
+    this.setState({
+      tutorId: this.props.match.params.tutorId
+    }, () => {
+      // Get data about logged in student
+      fetch("/selfDataStudent")
+      .then(res => res.json())
+      .then(res => {
+        console.log("selfData res: ", res);
+        this.setState({
+          studentEmail: res.email,
+          studentName: res.name,
+          studentId: res.id
+        })
+      })
+
+      // Get data for tutor
+      fetch("/tutorData/" + this.state.tutorId)
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        this.setState({
+          tutorId: res.id,
+          tutorName: res.name,
+          tutorEmail: res.email
+        })
       })
     })
-
-    // fetch data for tutor
-    
   }
   render() {
     return (
@@ -40,7 +54,7 @@ class tutorProfile extends Component {
           <div className="column">
 
             <div className="row">
-              <TutorHeader name={this.state.name} />
+              <TutorHeader name={this.state.tutorName} />
             </div>
 
             <div className="row">
