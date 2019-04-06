@@ -19,9 +19,9 @@ class TutorSessions extends Component {
                     </div>
                 </div>
 
-                <footer id="sessionsFooter" className="card-footer">
+                {/* <footer id="sessionsFooter" className="card-footer">
                     <a href="whatever" className="card-footer-item">Sessions Details —></a>
-                </footer>
+                </footer> */}
             </div>
         );
     }

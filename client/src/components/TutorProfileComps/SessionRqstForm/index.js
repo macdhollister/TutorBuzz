@@ -41,6 +41,7 @@ render() {
   return (
     <div className="RequestForm">
       <header className="card-header">
+      {/* <img src="/../../images/hcicon.png"></img> */}
         <h1 className="is-size-4 has-text-weight-bold has-text-info card-header-title" id="requestTitle">Request A Session</h1>
       </header>
 
@@ -99,7 +100,7 @@ render() {
         <div className="timedropdowns level">
           <div className="field level-left">
             <div className="control">
-              <div className="select">
+              <div className="select dropdowns">
                 <select>
                   <option>Hr</option>
                   <option value="1">1</option>
@@ -121,7 +122,7 @@ render() {
 
           <div className="field level-item">
             {/* <label className="label">Time</label> */}
-            <div className="control">
+            <div className="control dropdowns">
               <div className="select">
                 <select>
                   <option>Min</option>
@@ -136,7 +137,7 @@ render() {
 
           <div className="field level-item">
             {/* <label className="label">Time</label> */}
-            <div className="control">
+            <div className="control dropdowns">
               <div className="select">
                 <select>
                   <option value="AM">AM</option>
@@ -147,13 +148,13 @@ render() {
             </div>
           </div>
 
-          <div className="level-item">
+          <div className=" dropdowns level-item">
             to
           </div>
 
 
           <div className="field level-item">
-            <div className="control">
+            <div className="control dropdowns">
               <div className="select">
                 <select value={this.state.hour} onChange={this.hourChange}>
                   <option>Hr</option>
@@ -176,7 +177,7 @@ render() {
 
           <div className="field level-item">
             {/* <label className="label">Time</label> */}
-            <div className="control">
+            <div className="control dropdowns">
               <div className="select">
                 <select>
                   <option>Min</option>
@@ -189,9 +190,9 @@ render() {
             </div>
           </div>
 
-          <div className="field level-item" >
+          <div className="field level-item lastAMPM" >
             {/* <label className="label">Time</label> */}
-            <div className="control">
+            <div className="control dropdowns">
               <div className="select">
                 <select>
                   <option value="AM">AM</option>
@@ -203,7 +204,7 @@ render() {
         </div>
 
         <div className="field is-grouped">
-          <div className="control">
+          <div className="control dropdowns">
             <button className="button is-link" id="sessionRqstSubmit" type="submit" onClick={this.request}>Submit </button>
           </div>
           <div className="control">

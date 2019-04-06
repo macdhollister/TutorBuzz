@@ -48,14 +48,15 @@ class studentPortal extends Component {
             <StudentGreeting name={this.state.name} />
 
             <StudTodaySess name={this.state.date} />
-            <StudentUpcoming name={this.state.upcoming} />
+            
           </div>
           <div className="column">
             <StudentCalendar name={this.state.cal} />
             <StudentTutors name={this.state.tutor} />
           </div>
           <div className="column">
-            <StudentProfile name={this.state.StudentProfile} />
+            {/* <StudentProfile name={this.state.StudentProfile} /> */}
+            <StudentUpcoming name={this.state.upcoming} />
           </div>
         </div>
 

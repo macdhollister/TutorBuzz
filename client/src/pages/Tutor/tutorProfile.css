@@ -1,0 +1,100 @@
+body {
+  overflow: auto;
+}
+
+#tutorProfileCalendar {
+  width: 80%;
+  margin: 15px auto;
+}
+
+#TutorUpcomingSess {
+    width: 80%;
+    margin: 15px auto;
+    height: 300px;
+    border-radius: 10px;
+    overflow: auto;
+  }
+
+@media only screen and (max-width: 768px) {
+  .DayPicker-Month {
+    width: 400px;
+  }
+
+  #tutorProfileCalendar {
+    margin: auto;
+    height: auto;
+    width: 80%;
+  }
+
+  
+
+  #tutorProfileGreeting {
+    width: 50%;
+    margin: 20px 5px 25px 65px;
+    text-align: center;
+    height: 100px;
+    border-radius: 10px;
+  }
+
+  .RequestForm {
+    width: 71%;
+    margin: auto 65px;
+    /* margin-top: 50px;
+    margin-right: 80px; */
+    background-color: white;
+    padding: 30px;
+    height: 600px;
+    border-radius: 10px;
+    overflow-y: auto;
+  }
+
+  .timedropdowns {
+    display: inline-flex;
+    margin: 5px;
+  }
+
+  .dropdowns {
+    margin-left: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .DayPicker-Month {
+    width: 200px;
+  }
+
+  #tutorProfileCalendar {
+    margin: auto;
+    height: auto;
+    width: 80%;
+  }
+
+  #tutorProfileGreeting {
+    width: 80%;
+    margin: 15px auto;
+    /* margin: 20px 5px 25px 65px; */
+    text-align: center;
+    height: 100px;
+    border-radius: 10px;
+  }
+
+  .RequestForm {
+    width: 80%;
+    margin: 15px auto;
+    /* margin-top: 50px;
+    margin-right: 80px; */
+    background-color: white;
+    padding: 30px;
+    height: 600px;
+    border-radius: 10px;
+    overflow-y: auto;
+  }
+
+  #TutorUpcomingSess {
+    width: 80%;
+    margin: 15px auto;
+    height: 200px;
+    border-radius: 10px;
+    overflow: auto;
+  }
+}

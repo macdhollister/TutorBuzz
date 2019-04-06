@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import Footer from '../../components/StaticComps/Footer';
 import background from "../../images/honeycomb.png";
-import TutorHeader from "../../components/TutorProfileComps/TutorHeader"
-import TutorCalendar from "../../components/TutorComps/TutorCalendar";
-import TutorTodaySess from "../../components/TutorComps/TutorTodaySess";
+import TutorHeader from "../../components/TutorProfileComps/TutorHeader";
+// import TutorCalendar from "../../components/TutorComps/TutorCalendar";
+import TutorProfileCalendar from "../../components/TutorProfileComps/TutorProfileCalendar";
+import TutorSessions from "../../components/TutorComps/TutorSessions";
 import SessionRqstForm from "../../components/TutorProfileComps/SessionRqstForm";
 import Navbar from "../../components/StaticComps/Navbar";
 
-import getTodayDate from '../../utils/getTodayDate.js'
+import getTodayDate from '../../utils/getTodayDate.js';
+
+import "./tutorProfile.css";
 
 class tutorProfile extends Component {
   state = {
@@ -43,9 +46,9 @@ class tutorProfile extends Component {
               <TutorHeader name={this.state.name} />
             </div>
 
-            <div className="row">
-              <TutorCalendar data={this.state} />
-              <TutorTodaySess name={this.state.date} />
+            <div className="row tutorProfileCalendar" >
+              <TutorProfileCalendar data={this.state} />
+              <TutorSessions name={this.state.date} />
             </div>
 
           </div>

@@ -1,8 +1,16 @@
 #tutorCalendar {
-    margin: 50px 25px 25px 25px;
-    height: 400px;
+  margin: 40px 25px 25px 25px;
+  height: 350px;
 }
 
 #calendarContent {
-    justify-content: center;
+  justify-content: center;
 }
+
+/* .DatePicker {
+    width: 100%;
+} */
+.DayPicker-Month {
+  width: 400px;
+}
+

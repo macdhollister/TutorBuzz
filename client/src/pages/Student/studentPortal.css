@@ -1,18 +1,60 @@
 .Site {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-body, html {
-    height: 100%;
-    margin: 0 auto;
+body,
+html {
+  height: 100%;
+  margin: 0 auto;
 }
 
 body {
-    background-size: cover;
+  background-size: cover;
 }
 
 #footerFixStudent {
-    height: 80px;
+  height: 80px;
+}
+
+@media only screen and (max-width: 768px) {
+  #studentCalendar {
+    margin: auto;
+    width: 80%;
+    height: 350px;
+  }
+  .DayPicker-Month {
+    width: 300px;
+  }
+
+  #studentGreeting {
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 10px;
+    /* width: 75%; */
+  }
+
+  .todaySess {
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 10px;
+    height: 300px;
+  }
+
+  #tutorTable {
+    margin: 20px auto;
+    width: 80%;
+    height: 100px;
+    border-radius: 10px;
+  }
+
+  #upcomingSess {
+    margin: 10px auto;
+    border-radius: 10px;
+    width: 80%;
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 600px) {
 }
