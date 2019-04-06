@@ -21,6 +21,7 @@ module.exports = function(sequelize, DataTypes) {
         Tutor.belongsToMany(models.Tutor, {through: 'StudentTutor', as: 'sessions',  foreignKey: 'sessionId'})
         Tutor.hasOne(models.User, {
             onDelete: "cascade",
+            foreignKey: "tutorId",
             sourceKey: "id"
         })
 
@@ -33,9 +34,3 @@ module.exports = function(sequelize, DataTypes) {
 
     return Tutor;
 }
-
-
-
-
-
-//association for students and sessions

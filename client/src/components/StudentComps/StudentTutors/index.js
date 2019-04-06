@@ -23,8 +23,8 @@ class StudentTutors extends Component {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>John Doe</td>
-                        {/* <td>Math</td> */}
+                        <td><a href="tutorProfile/1">Albert Einstein</a></td>
+                        <td>Physics</td>
                     </tr>
                     <tr>
                         {/* <td>Josie</td>
