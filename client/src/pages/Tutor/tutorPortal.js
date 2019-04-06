@@ -59,7 +59,7 @@ class tutorPortal extends Component {
         <div id="footerFixTutor"></div>
 
         <Footer />
-
+      </div>
       </body>
 
     );
