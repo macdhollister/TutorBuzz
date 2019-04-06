@@ -21,7 +21,6 @@ class studentPortal extends Component {
     today: getTodayDate()
   }
 
-
   componentDidMount() {
     fetch("/selfDataStudent")
       .then(res => res.json())
@@ -36,13 +35,12 @@ class studentPortal extends Component {
       }));
   }
 
-
-
   render() {
     return (
-
+      <div className="Site">
       <div class="Site">
         <Navbar />
+
         <div className="columns">
           <div className="column">
             <StudentGreeting name={this.state.name} />
@@ -64,6 +62,7 @@ class studentPortal extends Component {
 
         <Footer />
 
+      </div>
       </div>
 
     );
