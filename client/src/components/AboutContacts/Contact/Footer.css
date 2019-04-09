@@ -1,9 +1,8 @@
 .footerDiv {
-    height: 60px;
-    margin-bottom:60px;
+    height: px;
+    align-content:bottom;
 }
 
 .footerText, .footerDiv {
     color: #fff;
-
 }

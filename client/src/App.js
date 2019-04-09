@@ -7,6 +7,8 @@ import studentPortal from "./pages/Student/studentPortal.js";
 import tutorProfile from "./pages/Tutor/tutorProfile.js";
 import './App.css';
 import Loginpage from './pages/HomeAndLogin/Loginpage';
+import AboutPage from './pages/ContactAboutPages/AboutPages/AboutPage';
+import ContactPage from './pages/ContactAboutPages/ContactPages/ContactPage';
 
 class App extends Component {
   render() {
@@ -19,7 +21,8 @@ class App extends Component {
           <Route exact path="/studentPortal" component={studentPortal} />
           <Route exact path="/tutorProfile/:tutorId" component={tutorProfile} />
           <Route exact path="/signup" component={SignupPage} />
-
+          <Route exact path="/About" component={AboutPage} />
+          <Route exact path="/Contact" component={ContactPage} />
         </div>
       </Router>
     );
