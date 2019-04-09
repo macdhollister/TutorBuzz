@@ -1,0 +1,15 @@
+.Site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+body, html {
+    height: 750px;
+    margin: 0 auto;
+}
+
+body {
+    /* background-image: url("../images/background.jpg"); */
+    background-size: cover;
+}
